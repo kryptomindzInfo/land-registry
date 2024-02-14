@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- begin::Head -->
+
+<head>
+    <meta charset="utf-8" />
+    <!-- <title>Land Registry Demo | My Profile</title> -->
+    <title>Land Registry Demo</title>
+    <link rel="icon" type="image/x-icon" href="../../images/favicon-32x32.png">
+    <meta name="description" content="Latest updates and statistic charts">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--begin::Fonts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+    <script>
+        WebFont.load({
+
+            google: {
+                "families": [
+                    "Poppins:300,400,500,600,700"]
+            },
+
+            active: function () {
+
+                sessionStorage.fonts = true;
+            }
+        });
+    </script>
+    <!--end::Fonts -->
+    <!--begin::Page Vendors Styles(used by this page) -->
+    <link href="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.css" rel="stylesheet" type="text/css" />
+    <!--RTL version:<link href="assets/vendors/custom/fullcalendar/fullcalendar.bundle.rtl.css" rel="stylesheet" type="text/css" />-->
+    <!--end::Page Vendors Styles -->
+    <!--begin::Global Theme Styles(used by all pages) -->
+    <link href="../assets/vendors/base/vendors.bundle.css" rel="stylesheet" type="text/css" />
+    <link href="../../js/pnotify/dist/PNotifyBrightTheme.css" rel="stylesheet" type="text/css" />
+    <!--RTL version:<link href="assets/vendors/base/vendors.bundle.rtl.css" rel="stylesheet" type="text/css" />-->
+    <link href="../assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
+    <!--RTL version:<link href="assets/demo/default/base/style.bundle.rtl.css" rel="stylesheet" type="text/css" />-->
+    <!--end::Global Theme Styles -->
+    <!--begin::Layout Skins(used by all pages) -->
+    <link href="../assets/demo/default/skins/header/base/light.css" rel="stylesheet" type="text/css" />
+    <!--RTL version:<link href="assets/demo/default/skins/header/base/light.rtl.css" rel="stylesheet" type="text/css" />-->
+    <link href="../assets/demo/default/skins/header/menu/light.css" rel="stylesheet" type="text/css" />
+    <!--RTL version:<link href="assets/demo/default/skins/header/menu/light.rtl.css" rel="stylesheet" type="text/css" />-->
+    <link href="../assets/demo/default/skins/brand/navy.css" rel="stylesheet" type="text/css" />
+    <!--RTL version:<link href="assets/demo/default/skins/brand/navy.rtl.css" rel="stylesheet" type="text/css" />-->
+    <link href="../assets/demo/default/skins/aside/navy.css" rel="stylesheet" type="text/css" />
+    <!--RTL version:<link href="assets/demo/default/skins/aside/navy.rtl.css" rel="stylesheet" type="text/css" />-->
+    <!--end::Layout Skins -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<!-- end::Head -->
+<!-- begin::Body -->
+
+<body
+    class="kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--transparent kt-aside--enabled kt-aside--fixed kt-page--loading">
+    <!-- begin:: Header Mobile -->
+    <div class="display-loader">
+        <div class="loader">
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+    <div id="loader-gen-wrapper" style="display: none">
+        <div id="loader-gen-background"></div>
+        <div class="loader-section"></div>
+    </div>
+    <div id="kt_header_mobile" class="kt-header-mobile kt-header-mobile--fixed ">
+        <div class="kt-header-mobile__logo">
+            <a href="index.html">
+                <img alt="Logo" src="../../images/logo.png" style="height: 20px" />
+            </a>
+        </div>
+        <div class="kt-header-mobile__toolbar">
+            <button class="kt-header-mobile__toolbar-toggler kt-header-mobile__toolbar-toggler--left"
+                id="kt_aside_mobile_toggler"><span></span></button>
+            <button class="kt-header-mobile__toolbar-toggler" id="kt_header_mobile_toggler"><span></span></button>
+            <button class="kt-header-mobile__toolbar-topbar-toggler" id="kt_header_mobile_topbar_toggler"><i
+                    class="flaticon-more"></i></button>
+        </div>
+    </div>
+    <!-- end:: Header Mobile -->
+    <!-- begin:: Root -->
+    <div class="kt-grid kt-grid--hor kt-grid--root">
+        <!-- begin:: Page -->
+        <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
+            <!-- begin:: Aside -->
+            <button class="kt-aside-close " id="kt_aside_close_btn"><i class="la la-close"></i></button>
+            <div class="kt-aside kt-aside--fixed kt-grid__item kt-grid kt-grid--desktop kt-grid--hor-desktop"
+                id="kt_aside">
+                <!-- begin::Aside Brand -->
+                <div class="kt-aside__brand kt-grid__item " id="kt_aside_brand">
+                    <div class="kt-aside__brand-logo">
+                        <a href="../index.html">
+                            <img alt="Logo" src="../../images/logo-white.png" / style="height:30px">
+
+                            <span class="logo_text">Land Registry</span>
+                        </a>
+                    </div>
+                    <div class="kt-aside__brand-tools">
+                        <button class="kt-aside__brand-aside-toggler kt-aside__brand-aside-toggler--left"
+                            id="kt_aside_toggler"><span></span></button>
+                    </div>
+                </div>
+                <!-- end:: Aside Brand -->
+                <!-- begin:: Aside Menu -->
+                <div class="kt-aside-menu-wrapper kt-grid__item kt-grid__item--fluid" id="kt_aside_menu_wrapper">
+                    <div id="kt_aside_menu" class="kt-aside-menu " data-ktmenu-vertical="1" data-ktmenu-scroll="1"
+                        data-ktmenu-dropdown-timeout="500">
+                        <ul class="kt-menu__nav ">
+                            <li class="kt-menu__item kt-menu__item--submenu kt-menu__item--open kt-menu__item--here"
+                                aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
+                                <a href="javascript:;" class="kt-menu__link kt-menu__toggle"><i
+                                        class="kt-menu__link-icon la la-dashboard"></i><span
+                                        class="kt-menu__link-text">Navigations</span><i
+                                        class="kt-menu__ver-arrow la la-angle-right"></i></a>
+                                <div class="kt-menu__submenu ">
+                                    <span class="kt-menu__arrow"></span>
+                                    <ul class="kt-menu__subnav">
+                                        <li class="kt-menu__item kt-menu__item--parent" aria-haspopup="true">
+                                            <span class="kt-menu__link"><span
+                                                    class="kt-menu__link-text">Dashboards</span></span>
+                                        </li>
+                                        <li class="kt-menu__item kt-menu__item--active" aria-haspopup="true">
+                                            <a href="../index.html" class="kt-menu__link ">
+                                                <i
+                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
+                                                <span class="kt-menu__link-text">Dashboard</span>
+                                            </a>
+                                        </li>
+                                        <li class="kt-menu__item kt-menu__item--active show_this" aria-haspopup="true">
+                                            <a href="landregister.html" class="kt-menu__link ">
+                                                <i
+                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
+                                                <span class="kt-menu__link-text">Register Land</span>
+                                            </a>
+                                        </li>
+                                        <li class="kt-menu__item kt-menu__item--active show_this" aria-haspopup="true">
+                                            <a href="landlist.html" class="kt-menu__link ">
+                                                <i
+                                                    class="kt-menu__link-bullet kt-menu__link-bullet--dot"><span></span></i>
+                                                <span class="kt-menu__link-text">My Lands</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <!-- end:: Aside Menu -->
+
+            </div>
+            <!-- end:: Aside -->
+            <!-- begin:: Wrapper -->
+            <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor kt-wrapper" id="kt_wrapper">
+                <!-- begin:: Header -->
+                <div id="kt_header" class="kt-header kt-grid__item kt-header--fixed ">
+                    <!-- begin:: Header Menu -->
+                    <button class="kt-header-menu-wrapper-close" id="kt_header_menu_mobile_close_btn"><i
+                            class="la la-close"></i></button>
+                    <div class="kt-header-menu-wrapper" id="kt_header_menu_wrapper">
+                        <div id="kt_header_menu" class="kt-header-menu kt-header-menu-mobile kt-header-menu--layout- ">
+                            <!-- <ul class="kt-menu__nav ">
+
+                                </ul> -->
+                        </div>
+                    </div>
+                    <!-- end:: Header Menu -->
+                    <!-- begin:: Header Topbar -->
+                    <div class="kt-header__topbar">
+                        <!--begin: Search -->
+                        <div class="kt-header__topbar-item kt-header__topbar-item--search dropdown">
+                            <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="10px,0px">
+                                <span class="kt-header__topbar-icon"><i class="la la-search"></i></span>
+                            </div>
+                            <div
+                                class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-top-unround dropdown-menu-anim dropdown-menu-lg">
+                                <div class="kt-quick-search kt-quick-search--dropdown kt-quick-search--result-compact"
+                                    id="kt_quick_search_dropdown">
+                                    <form method="get" class="kt-quick-search__form">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="la la-search"></i></span>
+                                            </div>
+                                            <input type="text" class="form-control kt-quick-search__input"
+                                                placeholder="Search...">
+                                            <div class="input-group-append">
+                                                <span class="input-group-text"><i
+                                                        class="la la-close kt-quick-search__close"></i></span>
+                                            </div>
+                                        </div>
+                                    </form>
+                                    <div class="kt-quick-search__wrapper kt-scroll" data-scroll="true" data-height="325"
+                                        data-mobile-height="200"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end: Search -->
+
+                        <!--end: Quick Actions -->
+
+                        <!--begin: User Bar -->
+                        <div class="kt-header__topbar-item kt-header__topbar-item--user">
+                            <div class="kt-header__topbar-wrapper" data-toggle="dropdown" data-offset="0px, 0px">
+                                <div class="kt-header__topbar-user">
+                                    <span class="kt-header__topbar-welcome kt-hidden-mobile">Hi,</span> <span
+                                        class="kt-header__topbar-username kt-hidden-mobile admin_name"></span>
+                                    <img alt="Pic" src="../assets/media/users/default.jpg" />
+                                    <!--use below badge element instead the user avatar to display username's first letter(remove kt-hidden class to display it) -->
+                                    <span
+                                        class="kt-badge kt-badge--username kt-badge--lg kt-badge--brand kt-hidden kt-badge--bold">S</span>
+                                </div>
+                            </div>
+                            <div
+                                class="dropdown-menu dropdown-menu-fit dropdown-menu-right dropdown-menu-anim dropdown-menu-top-unround dropdown-menu-sm">
+                                <div class="kt-user-card kt-margin-b-50 kt-margin-b-30-tablet-and-mobile"
+                                    style="background-image: url(assets/media/misc/head_bg_sm.jpg)">
+                                    <div class="kt-user-card__wrapper">
+                                        <div class="kt-user-card__pic">
+                                            <img alt="Pic" src="../assets/media/users/default.jpg" />
+                                        </div>
+                                        <div class="kt-user-card__details">
+                                            <div class="kt-user-card__name admin_name">Alex Stone</div>
+                                            <div class="kt-user-card__position admin_email">CTO, Loop Inc.</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="kt-nav kt-margin-b-10">
+                                    <li class="kt-nav__item">
+                                        <a href="profile.html" class="kt-nav__link">
+                                            <span class="kt-nav__link-icon"><i class="la la-user"></i></span>
+                                            <span class="kt-nav__link-text">My Profile</span>
+                                        </a>
+                                    </li>
+                                    <li class="kt-nav__item kt-nav__item--custom kt-margin-t-15"> <a id="signout_btn"
+                                            class="btn btn-outline-metal btn-hover-brand btn-upper btn-font-dark btn-sm btn-bold">Sign
+                                            Out</a> </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--end: User Bar -->
+                    </div>
+                    <!-- end:: Header Topbar -->
+                </div>
+                <!-- end:: Header -->
+                <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
+                    <!-- begin:: Subheader -->
+                    <div class="kt-subheader kt-grid__item" id="kt_subheader">
+                        <div class="kt-subheader__main">
+                            <h3 class="kt-subheader__title">
+                                Dashboard
+                            </h3>
+                            <span class="kt-subheader__separator kt-hidden"></span>
+                            <div class="kt-subheader__breadcrumbs">
+                                <a href="#" class="kt-subheader__breadcrumbs-home"><i class="la la-home"></i></a>
+                                <span class="kt-subheader__breadcrumbs-separator"></span> <a href=""
+                                    class="kt-subheader__breadcrumbs-link"> Dashboards </a> <span
+                                    class="kt-subheader__breadcrumbs-separator"></span> <a href=""
+                                    class="kt-subheader__breadcrumbs-link"> My Profile </a>
+                                <!-- <span class="kt-subheader__breadcrumbs-link kt-subheader__breadcrumbs-link--active">Active link</span> -->
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- end:: Subheader -->
+                    <!-- begin:: Content -->
+                    <div class="kt-content kt-grid__item kt-grid__item--fluid" id="kt_content">
+                        <!--begin::Dashboard 1-->
+
+                        <!--end::Row-->
+                        <!--begin::Row-->
+                        <div class="row">
+
+                            <div class="col-lg-12 col-xl-12 order-lg-3 order-xl-1">
+                                <!--begin: Personal Information-->
+                                <div class="tab-pane fade show active" id="kt_profile_tab_personal_information"
+                                    role="tabpanel">
+                                    <div class="kt-portlet">
+                                        <div class="kt-portlet__head">
+                                            <div class="kt-portlet__head-label">
+                                                <h3 class="kt-portlet__head-title">
+                                                    Personal Information <small>update your personal informaiton</small>
+                                                </h3>
+                                            </div>
+                                            <div class="kt-portlet__head-toolbar">
+                                                <div class="kt-portlet__head-wrapper">
+                                                    <div class="dropdown dropdown-inline">
+                                                        <button type="button"
+                                                            class="btn btn-clean btn-sm btn-icon btn-icon-md"
+                                                            id="edit_btn"> <i class="la la-pencil"></i> </button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <form class="kt-form kt-form--label-right" id="profile_edit_form">
+                                            <div class="kt-portlet__body">
+                                                <div class="kt-section kt-section--first">
+                                                    <div class="kt-section__body">
+
+                                                        <h3 class="kt-section__title kt-section__title-sm"
+                                                            style="border-bottom: 2px solid #eeeef4">
+                                                            Personal Info:
+                                                        </h3>
+                                                        <div class="row">
+                                                            <div class="form-group col-md-4 col-lg-4 col-sm-12 ">
+                                                                <label class=" col-form-label">First Name</label>
+                                                                <input class="form-control" id="firstname_text"
+                                                                    type="text" value="" disabled>
+                                                            </div>
+                                                            <div class="form-group col-md-4 col-lg-4 col-sm-12 ">
+                                                                <label class=" col-form-label">Middle Name</label>
+                                                                <input class="form-control" id="middlename_text"
+                                                                    type="text" value="" disabled>
+                                                            </div>
+                                                            <div class="form-group col-md-4 col-lg-4 col-sm-12 ">
+                                                                <label class=" col-form-label">Last Name</label>
+                                                                <input class="form-control" id="lastname_text"
+                                                                    type="text" value="" disabled>
+                                                            </div>
+                                                            <div class="form-group col-md-4 col-lg-4 col-sm-12 ">
+                                                                <label class=" col-form-label">User ID</label>
+                                                                <input class="form-control" id="user_id_text"
+                                                                    type="text" value="" disabled>
+                                                            </div>
+
+                                                            <div class="form-group col-md-4 col-lg-4 col-sm-12 ">
+                                                                <label class=" col-form-label">Gender</label>
+
+                                                                <div class="kt-radio-inline">
+                                                                    <label class="kt-radio">
+                                                                        <input type="radio" class="gender_text" checked
+                                                                            value="0" name="gender_text" disabled>
+                                                                        Male <span></span>
+                                                                    </label>
+                                                                    <label class="kt-radio">
+                                                                        <input type="radio" class="gender_text"
+                                                                            value="1" name="gender_text" disabled>
+                                                                        Female <span></span>
+                                                                    </label>
+                                                                    <label class="kt-radio">
+                                                                        <input type="radio" class="gender_text"
+                                                                            value="2" name="gender_text" disabled>
+                                                                        Other <span></span>
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="form-group col-md-4 col-lg-4 col-sm-12">
+                                                                <label class=" col-form-label">DOB</label>
+
+                                                                <div class="input-group date">
+                                                                    <input type="text" class="form-control "
+                                                                        name="birthdate_text"
+                                                                        placeholder="Select Date of Birth"
+                                                                        id="birthdate_text" data-date-end-date="0d"
+                                                                        disabled>
+                                                                    <div class="input-group-append">
+                                                                        <span class="input-group-text"> <i
+                                                                                class="la la-calendar-check-o"></i>
+                                                                        </span>
+                                                                    </div>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                        <h3 class="kt-section__title kt-section__title-sm"
+                                                            style="border-bottom: 2px solid #eeeef4">
+                                                            Education Info:
+                                                        </h3>
+                                                        <div class="row">
+                                                            <div class="form-group col-md-4 col-lg-4 col-sm-12 ">
+                                                                <label class=" col-form-label">Education</label>
+
+                                                                <input class="form-control" id="education_text"
+                                                                    type="text" value="" disabled>
+
+                                                            </div>
+                                                            <div class="form-group col-md-4 col-lg-4 col-sm-12 ">
+                                                                <label class=" col-form-label">Maritial Status</label>
+
+                                                                <div class="kt-radio-inline">
+                                                                    <label class="kt-radio">
+                                                                        <input type="radio" value="0"
+                                                                            class="maritial_status_text" checked
+                                                                            name="maritial_status_text" disabled>
+                                                                        Single <span></span>
+                                                                    </label>
+                                                                    <label class="kt-radio">
+                                                                        <input type="radio" value="1"
+                                                                            class="maritial_status_text"
+                                                                            name="maritial_status_text" disabled>
+                                                                        Married <span></span>
+                                                                    </label>
+                                                                    <label class="kt-radio">
+                                                                        <input type="radio" value="2"
+                                                                            class="maritial_status_text"
+                                                                            name="maritial_status_text" disabled>
+                                                                        Divorce <span></span>
+                                                                    </label>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="form-group col-md-4 col-lg-4 col-sm-12 ">
+                                                                <label class=" col-form-label">Employment</label>
+
+                                                                <input class="form-control" id="employment_text"
+                                                                    type="text" value="" disabled>
+
+                                                            </div>
+                                                        </div>
+                                                        <h3 class="kt-section__title kt-section__title-sm"
+                                                            style="border-bottom: 2px solid #eeeef4">
+                                                            General Info:
+                                                        </h3>
+                                                        <div class="row">
+
+                                                            <div class="form-group col-md-4 col-lg-4 col-sm-12 ">
+                                                                <label class=" col-form-label">Email
+                                                                    Address</label>
+
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i
+                                                                                class="la la-at"></i></span>
+                                                                    </div>
+                                                                    <input type="text" class="form-control"
+                                                                        id="email_text" value="" placeholder="Email"
+                                                                        aria-describedby="basic-addon1" disabled>
+                                                                </div>
+
+                                                            </div>
+                                                            <div class="form-group col-md-4 col-lg-4 col-sm-12 ">
+                                                                <label class=" col-form-label">Contact
+                                                                    Phone</label>
+
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i
+                                                                                class="la la-phone"></i></span>
+                                                                    </div>
+                                                                    <input type="text" class="form-control"
+                                                                        id="phone_no_text" value="" placeholder="Phone"
+                                                                        aria-describedby="basic-addon1" disabled>
+                                                                </div>
+                                                                <span class="form-text text-muted">We'll never share
+                                                                    your email with anyone else.</span>
+
+                                                            </div>
+                                                            <div class="form-group col-md-4 col-lg-4 col-sm-12 ">
+                                                                <label class=" col-form-label uniqueid_lbl">Nationality
+                                                                    ID</label>
+
+                                                                <input class="form-control" id="uniqueid_text"
+                                                                    type="text" value="" disabled>
+
+                                                            </div>
+                                                            <div class="form-group col-md-4 col-lg-4 col-sm-12 ">
+                                                                <label class=" col-form-label">Current
+                                                                    Address</label>
+
+                                                                <textarea class="form-control" id="address_text"
+                                                                    type="text" value="" disabled></textarea>
+
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="kt-portlet__foot">
+                                                <div class="kt-form__actions">
+                                                    <div class="row">
+                                                        <div class="col-lg-3 col-xl-3"></div>
+                                                        <div class="col-lg-9 col-xl-9">
+                                                            <button type="submit" id="submit_btn"
+                                                                class="btn btn-success" disabled>Submit</button>
+                                                            <a href="../index.html" id="cancel_btn"
+                                                                class="btn btn-primary">Cancel</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!--end: Personal Information-->
+                            </div>
+
+                        </div>
+                        <!--end::Row-->
+                        <!--end::Dashboard 1-->
+                        <div class="modal fade" id="auth_code_modal" tabindex="-1" role="dialog"
+                            aria-labelledby="preview_details_title" aria-hidden="true" data-backdrop="static"
+                            data-keyboard="false">
+                            <div class="modal-dialog modal-dialog-scrollable" role="document" style="width:500px">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="preview_details_title">
+                                            Please Enter your Authorization Code
+                                        </h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">×</span> </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="popup" id="otp-popup">
+                                            <!-- <div class="popup-form"> -->
+                                            <form id="verifyOtpForm" class="kt-form">
+                                                <div class="form-field centertext">
+                                                    <label class="auth_code_msg">Authorization Code has been sent to
+                                                        your email</label>
+                                                    <input type="password" id="otp_text"
+                                                        class="form-control authpassword"
+                                                        placeholder="Authorization Code">
+                                                    <!-- <input type="password" id="otp" name="otp" placeholder="Authorization Code"> -->
+                                                    <input type="hidden" id="serverOtp" name="serverOtp"
+                                                        placeholder="OTP">
+                                                </div>
+                                                <div class="center_btn">
+                                                    <button type="submit"
+                                                        class="btn btn-primary btn-wide auth_btn">Verify</button>
+                                                </div>
+                                            </form>
+                                            <!-- </div> -->
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-outline-brand"
+                                            data-dismiss="modal">Close</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end:: Content -->
+                </div>
+                <!-- begin:: Footer -->
+                <div class="kt-footer kt-grid__item kt-grid kt-grid--desktop kt-grid--ver-desktop">
+                    <div class="kt-footer__copyright"> 2018&nbsp;&copy;&nbsp;<a href="#" target="_blank"
+                            class="kt-link">Land Registry Demo</a> </div>
+                    <!-- <div class="kt-footer__menu"> <a href="#" target="_blank"
+                            class="kt-footer__menu-link kt-link">About</a> <a href="#"
+                            target="_blank" class="kt-footer__menu-link kt-link">Team</a> <a
+                            href="#" target="_blank"
+                            class="kt-footer__menu-link kt-link">Contact</a> </div> -->
+                </div>
+                <!-- end:: Footer -->
+            </div>
+            <!-- end:: Wrapper -->
+        </div>
+        <!-- end:: Page -->
+    </div>
+    <!-- end:: Root -->
+    <!-- begin::Global Config(global config for global JS sciprts) -->
+    <script>
+        var KTAppOptions = {
+
+            "colors": {
+
+                "state": {
+
+                    "brand": "#5d78ff",
+
+                    "metal": "#c4c5d6",
+
+                    "light": "#ffffff",
+
+                    "accent": "#00c5dc",
+
+                    "primary": "#5867dd",
+
+                    "success": "#34bfa3",
+
+                    "info": "#36a3f7",
+
+                    "warning": "#ffb822",
+
+                    "danger": "#fd3995",
+
+                    "focus": "#9816f4"
+                },
+
+                "base": {
+
+                    "label": [
+
+                        "#c5cbe3",
+
+                        "#a1a8c3",
+
+                        "#3d4465",
+
+                        "#3e4466"
+                    ],
+
+                    "shape": [
+
+                        "#f0f3ff",
+
+                        "#d9dffa",
+
+                        "#afb4d4",
+
+                        "#646c9a"
+                    ]
+                }
+            }
+        };
+    </script>
+    <!-- end::Global Config -->
+    <!--begin::Global Theme Bundle(used by all pages) -->
+    <script src="../../js/jquery-3.3.1.min.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="../../js/pnotify/dist/iife/PNotify.js"></script>
+    <script type="text/javascript" src="../../js/pnotify/dist/iife/PNotifyButtons.js"></script>
+    <script src="../../js/events.js" type="text/javascript"></script>
+    <script src="../../js/authcheck.js" type="text/javascript"></script>
+
+    <script src="../assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../../js/profile.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"
+        integrity="sha256-H9jAz//QLkDOy/nzE9G4aYijQtkLt9FvGmdUTwBk6gs=" crossorigin="anonymous"></script>
+    <script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
+    <!--end::Global Theme Bundle -->
+    <!--begin::Page Vendors(used by this page) -->
+    <!-- <script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script> -->
+    <!--end::Page Vendors -->
+    <!--begin::Page Scripts(used by this page) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+    <!-- <script src="../assets/app/custom/general/dashboard.js" type="text/javascript"></script> -->
+    <!--end::Page Scripts -->
+    <!--begin::Global App Bundle(used by all pages) -->
+    <script src="../assets/app/bundle/app.bundle.js" type="text/javascript"></script>
+    <!-- <script src="../assets/app/custom/general/components/forms/widgets/bootstrap-datepicker.js" type="text/javascript"></script> -->
+
+    <!--end::Global App Bundle -->
+</body>
+<!-- end::Body -->
+
+</html>

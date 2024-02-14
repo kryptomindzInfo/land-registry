@@ -1,0 +1,7 @@
+bin
+wallet
+app/view/uploaded_doc
+*.tar.gz
+node_modules
+.DS_Store
+.env

@@ -1,0 +1,11 @@
+{"_id":{"$oid":"5d8e01209c4952b46fb719fa"},"id":1.0,"region_id":1.0,"name":"Meru District Council"}
+{"_id":{"$oid":"5d8e01209c4952b46fb719fb"},"id":2.0,"region_id":1.0,"name":"Arusha District Council"}
+{"_id":{"$oid":"5d8e01209c4952b46fb719fc"},"id":3.0,"region_id":1.0,"name":"Karatu District Council"}
+{"_id":{"$oid":"5d8e01209c4952b46fb719fd"},"id":4.0,"region_id":1.0,"name":"Longido District Council"}
+{"_id":{"$oid":"5d8e01209c4952b46fb719fe"},"id":5.0,"region_id":1.0,"name":"Monduli District Council"}
+{"_id":{"$oid":"5d8e01209c4952b46fb719ff"},"id":6.0,"region_id":1.0,"name":"Ngorongoro District Council"}
+{"_id":{"$oid":"5d8e01209c4952b46fb71a00"},"id":7.0,"region_id":2.0,"name":"Ilala Municipal Council"}
+{"_id":{"$oid":"5d8e01209c4952b46fb71a01"},"id":8.0,"region_id":2.0,"name":"Kinondoni Municipal Council"}
+{"_id":{"$oid":"5d8e01209c4952b46fb71a02"},"id":9.0,"region_id":2.0,"name":"Temeke Municipal Council"}
+{"_id":{"$oid":"5d8e01209c4952b46fb71a03"},"id":10.0,"region_id":2.0,"name":"Kigamboni Municipal Council"}
+{"_id":{"$oid":"5d8e01209c4952b46fb71a04"},"id":11.0,"region_id":2.0,"name":"Ubungo Municipal Council"}

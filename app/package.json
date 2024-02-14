@@ -1,0 +1,30 @@
+{
+  "name": "landreg",
+  "version": "1.0.0",
+  "description": "Hyperledger Fabric Land Registry Application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "nodemon": "nodemon app.js"
+  },
+  "dependencies": {
+    "asn1.js": "^5.4.1",
+    "assert": "^2.0.0",
+    "body-parser": "^1.20.2",
+    "compression": "^1.7.4",
+    "dotenv": "^16.3.1",
+    "date-format": "^4.0.14",
+    "express": "^4.18.2",
+    "fabric-ca-client": "^2.2.18",
+    "fabric-network": "^2.2.18",
+    "ipfs-http-client": "~56.0.2 ",
+    "js-sha256": "^0.9.0",
+    "jsonwebtoken": "^9.0.0",
+    "material-design-icons": "^3.0.1",
+    "mongodb": "^5.6.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.3",
+    "pdfkit": "^0.13.0"
+  },
+  "license": "Apache-2.0"
+}

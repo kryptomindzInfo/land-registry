@@ -1,0 +1,222 @@
+{"_id":{"$oid":"5d8eee78a2b5f05d7a27a0ae"},"id":1.0,"district_id":1.0,"name":"Akheri"}
+{"_id":{"$oid":"5d8eee78a2b5f05d7a27a0af"},"id":2.0,"district_id":1.0,"name":"Bangata"}
+{"_id":{"$oid":"5d8eee78a2b5f05d7a27a0b0"},"id":3.0,"district_id":1.0,"name":"Bwawani"}
+{"_id":{"$oid":"5d8eee78a2b5f05d7a27a0b1"},"id":4.0,"district_id":1.0,"name":"Ilkiding'a"}
+{"_id":{"$oid":"5d8eee78a2b5f05d7a27a0b2"},"id":5.0,"district_id":1.0,"name":"Kikatiti"}
+{"_id":{"$oid":"5d8eee78a2b5f05d7a27a0b3"},"id":6.0,"district_id":1.0,"name":"Kikwe"}
+{"_id":{"$oid":"5d8eee78a2b5f05d7a27a0b4"},"id":7.0,"district_id":1.0,"name":"Kimnyaki"}
+{"_id":{"$oid":"5d8eee78a2b5f05d7a27a0b5"},"id":8.0,"district_id":1.0,"name":"King'ori"}
+{"_id":{"$oid":"5d8eee78a2b5f05d7a27a0b6"},"id":9.0,"district_id":1.0,"name":"Kiranyi"}
+{"_id":{"$oid":"5d8eee78a2b5f05d7a27a0b7"},"id":10.0,"district_id":1.0,"name":"Kisongo"}
+{"_id":{"$oid":"5d8eee78a2b5f05d7a27a0b8"},"id":11.0,"district_id":1.0,"name":"Leguruki"}
+{"_id":{"$oid":"5d8eee78a2b5f05d7a27a0b9"},"id":12.0,"district_id":1.0,"name":"Makiba"}
+{"_id":{"$oid":"5d8eee78a2b5f05d7a27a0ba"},"id":13.0,"district_id":1.0,"name":"Maji ya Chai"}
+{"_id":{"$oid":"5d8eee78a2b5f05d7a27a0bb"},"id":14.0,"district_id":1.0,"name":"Maroroni"}
+{"_id":{"$oid":"5d8eee78a2b5f05d7a27a0bc"},"id":15.0,"district_id":1.0,"name":"Mateves"}
+{"_id":{"$oid":"5d8eee78a2b5f05d7a27a0bd"},"id":16.0,"district_id":1.0,"name":"Mbuguni"}
+{"_id":{"$oid":"5d8eee78a2b5f05d7a27a0be"},"id":17.0,"district_id":1.0,"name":"Mlangarini"}
+{"_id":{"$oid":"5d8eee78a2b5f05d7a27a0bf"},"id":18.0,"district_id":1.0,"name":"Moivo"}
+{"_id":{"$oid":"5d8eee78a2b5f05d7a27a0c0"},"id":19.0,"district_id":1.0,"name":"Moshono"}
+{"_id":{"$oid":"5d8eee78a2b5f05d7a27a0c1"},"id":20.0,"district_id":1.0,"name":"Murieti"}
+{"_id":{"$oid":"5d8eeec7a2b5f05d7a27a0c2"},"id":21.0,"district_id":1.0,"name":"Musa"}
+{"_id":{"$oid":"5d8eeec7a2b5f05d7a27a0c3"},"id":22.0,"district_id":1.0,"name":"Mwandeti"}
+{"_id":{"$oid":"5d8eeec7a2b5f05d7a27a0c4"},"id":23.0,"district_id":1.0,"name":"Nduruma"}
+{"_id":{"$oid":"5d8eeec7a2b5f05d7a27a0c5"},"id":24.0,"district_id":1.0,"name":"Ngarenanyuki"}
+{"_id":{"$oid":"5d8eeec7a2b5f05d7a27a0c6"},"id":25.0,"district_id":1.0,"name":"Nkoanrua"}
+{"_id":{"$oid":"5d8eeec7a2b5f05d7a27a0c7"},"id":26.0,"district_id":1.0,"name":"Nkoaranga"}
+{"_id":{"$oid":"5d8eeec7a2b5f05d7a27a0c8"},"id":27.0,"district_id":1.0,"name":"Nkoarisambu"}
+{"_id":{"$oid":"5d8eeec7a2b5f05d7a27a0c9"},"id":28.0,"district_id":1.0,"name":"Oldonyosambu"}
+{"_id":{"$oid":"5d8eeec7a2b5f05d7a27a0ca"},"id":29.0,"district_id":1.0,"name":"Oljoro"}
+{"_id":{"$oid":"5d8eeec7a2b5f05d7a27a0cb"},"id":30.0,"district_id":1.0,"name":"Olkokola"}
+{"_id":{"$oid":"5d8eeec7a2b5f05d7a27a0cc"},"id":31.0,"district_id":1.0,"name":"Oltroto"}
+{"_id":{"$oid":"5d8eeec7a2b5f05d7a27a0cd"},"id":32.0,"district_id":1.0,"name":"Oltrumet"}
+{"_id":{"$oid":"5d8eeec7a2b5f05d7a27a0ce"},"id":33.0,"district_id":1.0,"name":"Poli"}
+{"_id":{"$oid":"5d8eeec7a2b5f05d7a27a0cf"},"id":34.0,"district_id":1.0,"name":"Singisi"}
+{"_id":{"$oid":"5d8eeec7a2b5f05d7a27a0d0"},"id":35.0,"district_id":1.0,"name":"Sokoni II"}
+{"_id":{"$oid":"5d8eeec7a2b5f05d7a27a0d1"},"id":36.0,"district_id":1.0,"name":"Songoro"}
+{"_id":{"$oid":"5d8eeec7a2b5f05d7a27a0d2"},"id":37.0,"district_id":1.0,"name":"Usa River"}
+{"_id":{"$oid":"5d8eeec7a2b5f05d7a27a0d3"},"id":38.0,"district_id":1.0,"name":"Baraa"}
+{"_id":{"$oid":"5d8eeec7a2b5f05d7a27a0d4"},"id":39.0,"district_id":1.0,"name":"Daraja Mbili"}
+{"_id":{"$oid":"5d8eeec7a2b5f05d7a27a0d5"},"id":40.0,"district_id":1.0,"name":"Elerai"}
+{"_id":{"$oid":"5d8eeec7a2b5f05d7a27a0d6"},"id":41.0,"district_id":1.0,"name":"Engosheraton"}
+{"_id":{"$oid":"5d8eeec7a2b5f05d7a27a0d7"},"id":42.0,"district_id":1.0,"name":"Engutoto"}
+{"_id":{"$oid":"5d8eeec7a2b5f05d7a27a0d8"},"id":43.0,"district_id":1.0,"name":"Kaloleni"}
+{"_id":{"$oid":"5d8eeec7a2b5f05d7a27a0d9"},"id":44.0,"district_id":1.0,"name":"Kati"}
+{"_id":{"$oid":"5d8eeec7a2b5f05d7a27a0da"},"id":45.0,"district_id":1.0,"name":"Kimandolu"}
+{"_id":{"$oid":"5d8eeec7a2b5f05d7a27a0db"},"id":46.0,"district_id":1.0,"name":"Lemara"}
+{"_id":{"$oid":"5d8eeec7a2b5f05d7a27a0dc"},"id":47.0,"district_id":1.0,"name":"Levolosi"}
+{"_id":{"$oid":"5d8eeec7a2b5f05d7a27a0dd"},"id":48.0,"district_id":1.0,"name":"Ngarenaro"}
+{"_id":{"$oid":"5d8eeec7a2b5f05d7a27a0de"},"id":49.0,"district_id":1.0,"name":"Oloirien"}
+{"_id":{"$oid":"5d8eeec7a2b5f05d7a27a0df"},"id":50.0,"district_id":1.0,"name":"Sekei"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0e0"},"id":51.0,"district_id":1.0,"name":"Sokon I"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0e1"},"id":52.0,"district_id":1.0,"name":"Sombetini"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0e2"},"id":53.0,"district_id":1.0,"name":"Terrat"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0e3"},"id":54.0,"district_id":1.0,"name":"Themi"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0e4"},"id":55.0,"district_id":1.0,"name":"Unga L.T.D."}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0e5"},"id":56.0,"district_id":2.0,"name":"Bangata"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0e6"},"id":57.0,"district_id":2.0,"name":"Ilboru"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0e7"},"id":58.0,"district_id":2.0,"name":"Ilkiding'a"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0e8"},"id":59.0,"district_id":2.0,"name":"Kiranyi"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0e9"},"id":60.0,"district_id":2.0,"name":"Kisongo"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0ea"},"id":61.0,"district_id":2.0,"name":"Kiutu"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0eb"},"id":62.0,"district_id":2.0,"name":"Laroi"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0ec"},"id":63.0,"district_id":2.0,"name":"Lemanyata"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0ed"},"id":64.0,"district_id":2.0,"name":"Mateves"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0ee"},"id":65.0,"district_id":2.0,"name":"Mlangarini"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0ef"},"id":66.0,"district_id":2.0,"name":"Moivo"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0f0"},"id":67.0,"district_id":2.0,"name":"Musa"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0f1"},"id":68.0,"district_id":2.0,"name":"Mwandeti"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0f2"},"id":69.0,"district_id":2.0,"name":"Nduruma"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0f3"},"id":70.0,"district_id":2.0,"name":"Oldadai"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0f4"},"id":71.0,"district_id":2.0,"name":"Oldonyomaasi"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0f5"},"id":72.0,"district_id":2.0,"name":"Oldonyosambu"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0f6"},"id":73.0,"district_id":2.0,"name":"Oljoro"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0f7"},"id":74.0,"district_id":2.0,"name":"Olmotonyi"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0f8"},"id":75.0,"district_id":2.0,"name":"Olorieni"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0f9"},"id":76.0,"district_id":2.0,"name":"Oltoroto"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0fa"},"id":77.0,"district_id":2.0,"name":"Oltrumet"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0fb"},"id":78.0,"district_id":2.0,"name":"Sambasha"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0fc"},"id":79.0,"district_id":2.0,"name":"Sokon II"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0fd"},"id":80.0,"district_id":2.0,"name":"Tarakwa"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0fe"},"id":81.0,"district_id":2.0,"name":"Timbolo"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a0ff"},"id":82.0,"district_id":3.0,"name":"Baray"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a100"},"id":83.0,"district_id":3.0,"name":"Buger"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a101"},"id":84.0,"district_id":3.0,"name":"Daa"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a102"},"id":85.0,"district_id":3.0,"name":"Endabash"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a103"},"id":86.0,"district_id":3.0,"name":"Endamarariek"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a104"},"id":87.0,"district_id":3.0,"name":"Kansay"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a105"},"id":88.0,"district_id":3.0,"name":"Karatu"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a106"},"id":89.0,"district_id":3.0,"name":"Mang'ola"}
+{"_id":{"$oid":"5d8eef05a2b5f05d7a27a107"},"id":90.0,"district_id":3.0,"name":"Mbulumbulu"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a108"},"id":91.0,"district_id":3.0,"name":"Oldeani"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a109"},"id":92.0,"district_id":3.0,"name":"Qurus"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a10a"},"id":93.0,"district_id":3.0,"name":"Rhotia"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a10b"},"id":94.0,"district_id":4.0,"name":"Elang'atadapash"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a10c"},"id":95.0,"district_id":4.0,"name":"Engarenaibo"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a10d"},"id":96.0,"district_id":4.0,"name":"Engikaret"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a10e"},"id":97.0,"district_id":4.0,"name":"Gelai Lumbwa"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a10f"},"id":98.0,"district_id":4.0,"name":"Gelai Meirugoi"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a110"},"id":99.0,"district_id":4.0,"name":"Iloirienito"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a111"},"id":100.0,"district_id":4.0,"name":"Kamwanga"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a112"},"id":101.0,"district_id":4.0,"name":"Ketumbeine"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a113"},"id":102.0,"district_id":4.0,"name":"Kimokouwa"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a114"},"id":103.0,"district_id":4.0,"name":"Longido"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a115"},"id":104.0,"district_id":4.0,"name":"Matale"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a116"},"id":105.0,"district_id":4.0,"name":"Mundarara"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a117"},"id":106.0,"district_id":4.0,"name":"Namanga"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a118"},"id":107.0,"district_id":4.0,"name":"Noondoto"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a119"},"id":108.0,"district_id":4.0,"name":"Ol‐molog"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a11a"},"id":109.0,"district_id":4.0,"name":"Orbomba"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a11b"},"id":110.0,"district_id":4.0,"name":"Sinya"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a11c"},"id":111.0,"district_id":4.0,"name":"Tingatinga"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a11d"},"id":112.0,"district_id":5.0,"name":"Engarenaibor"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a11e"},"id":113.0,"district_id":5.0,"name":"Engaruka"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a11f"},"id":114.0,"district_id":5.0,"name":"Engutoto"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a120"},"id":115.0,"district_id":5.0,"name":"Esilalei"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a121"},"id":116.0,"district_id":5.0,"name":"Gelai Lumbwa"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a122"},"id":117.0,"district_id":5.0,"name":"Gelai Meirugoi"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a123"},"id":118.0,"district_id":5.0,"name":"Kitumbeine"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a124"},"id":119.0,"district_id":5.0,"name":"Lolkisale"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a125"},"id":120.0,"district_id":5.0,"name":"Longido"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a126"},"id":121.0,"district_id":5.0,"name":"Makuyuni"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a127"},"id":122.0,"district_id":5.0,"name":"Matale"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a128"},"id":123.0,"district_id":5.0,"name":"Moita"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a129"},"id":124.0,"district_id":5.0,"name":"Monduli Juu"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a12a"},"id":125.0,"district_id":5.0,"name":"Monduli Mjini"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a12b"},"id":126.0,"district_id":5.0,"name":"Mto wa Mbu[2]"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a12c"},"id":127.0,"district_id":5.0,"name":"Ol-molog"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a12d"},"id":128.0,"district_id":5.0,"name":"Selela"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a12e"},"id":129.0,"district_id":5.0,"name":"Sepeko"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a12f"},"id":130.0,"district_id":5.0,"name":"Tingatinga"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a130"},"id":131.0,"district_id":6.0,"name":"Arash"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a131"},"id":132.0,"district_id":6.0,"name":"Digodigo"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a132"},"id":133.0,"district_id":6.0,"name":"Enduleni"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a133"},"id":134.0,"district_id":6.0,"name":"Kakesio"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a134"},"id":135.0,"district_id":6.0,"name":"Malambo"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a135"},"id":136.0,"district_id":6.0,"name":"Nainokanoka"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a136"},"id":137.0,"district_id":6.0,"name":"Nayobi"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a137"},"id":138.0,"district_id":6.0,"name":"Olbalbal"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a138"},"id":139.0,"district_id":6.0,"name":"Oldonyo-Sambu"}
+{"_id":{"$oid":"5d8eef55a2b5f05d7a27a139"},"id":140.0,"district_id":6.0,"name":"Orgosorok"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a13a"},"id":141.0,"district_id":6.0,"name":"Ngorongoro"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a13b"},"id":142.0,"district_id":6.0,"name":"Pinyinyi"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a13c"},"id":143.0,"district_id":6.0,"name":"Sale"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a13d"},"id":144.0,"district_id":6.0,"name":"Soit Sambu"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a13e"},"id":145.0,"district_id":6.0,"name":"Ololosokwan"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a13f"},"id":146.0,"district_id":6.0,"name":"Oloipiri"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a140"},"id":147.0,"district_id":6.0,"name":"Enguserosambu"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a141"},"id":148.0,"district_id":6.0,"name":"Orgosorok"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a142"},"id":149.0,"district_id":6.0,"name":"Nayobi"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a143"},"id":150.0,"district_id":7.0,"name":"Buguruni"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a144"},"id":151.0,"district_id":7.0,"name":"Chanika"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a145"},"id":152.0,"district_id":7.0,"name":"Gerezani"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a146"},"id":153.0,"district_id":7.0,"name":"Ilala"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a147"},"id":154.0,"district_id":7.0,"name":"Jangwani"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a148"},"id":155.0,"district_id":7.0,"name":"Kariakoo"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a149"},"id":156.0,"district_id":7.0,"name":"Kinyerezi"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a14a"},"id":157.0,"district_id":7.0,"name":"Kipawa"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a14b"},"id":158.0,"district_id":7.0,"name":"Kitunda"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a14c"},"id":159.0,"district_id":7.0,"name":"Kisutu"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a14d"},"id":160.0,"district_id":7.0,"name":"Kivukoni"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a14e"},"id":161.0,"district_id":7.0,"name":"Kiwalani"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a14f"},"id":162.0,"district_id":7.0,"name":"Mchafukoge"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a150"},"id":163.0,"district_id":7.0,"name":"Mchikichini"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a151"},"id":164.0,"district_id":7.0,"name":"Msongola"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a152"},"id":165.0,"district_id":7.0,"name":"Pugu"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a153"},"id":166.0,"district_id":7.0,"name":"Segerea"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a154"},"id":167.0,"district_id":7.0,"name":"Tabata"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a155"},"id":168.0,"district_id":7.0,"name":"Ukonga"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a156"},"id":169.0,"district_id":7.0,"name":"Upanga East"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a157"},"id":170.0,"district_id":7.0,"name":"Upanga West"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a158"},"id":171.0,"district_id":7.0,"name":"Vingunguti"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a159"},"id":172.0,"district_id":8.0,"name":"Bunju"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a15a"},"id":173.0,"district_id":8.0,"name":"Goba"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a15b"},"id":174.0,"district_id":8.0,"name":"Hananasif"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a15c"},"id":175.0,"district_id":8.0,"name":"Kawe"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a15d"},"id":176.0,"district_id":8.0,"name":"Kibamba"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a15e"},"id":177.0,"district_id":8.0,"name":"Kigogo"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a15f"},"id":178.0,"district_id":8.0,"name":"Kijitonyama"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a160"},"id":179.0,"district_id":8.0,"name":"Kimara"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a161"},"id":180.0,"district_id":8.0,"name":"Kinondoni"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a162"},"id":181.0,"district_id":8.0,"name":"Kunduchi"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a163"},"id":182.0,"district_id":8.0,"name":"Mabibo"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a164"},"id":183.0,"district_id":8.0,"name":"Magomeni"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a165"},"id":184.0,"district_id":8.0,"name":"Makuburi"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a166"},"id":185.0,"district_id":8.0,"name":"Makumbusho"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a167"},"id":186.0,"district_id":8.0,"name":"Makurumula"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a168"},"id":187.0,"district_id":8.0,"name":"Manzese"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a169"},"id":188.0,"district_id":8.0,"name":"Mbezi"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a16a"},"id":189.0,"district_id":8.0,"name":"Mburahati"}
+{"_id":{"$oid":"5d8eef92a2b5f05d7a27a16b"},"id":190.0,"district_id":8.0,"name":"Mbweni"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a16c"},"id":191.0,"district_id":8.0,"name":"Mikocheni"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a16d"},"id":192.0,"district_id":8.0,"name":"Msasani"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a16e"},"id":193.0,"district_id":8.0,"name":"Mwananyamala"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a16f"},"id":194.0,"district_id":8.0,"name":"Mzimuni"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a170"},"id":195.0,"district_id":8.0,"name":"Ndugumbi"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a171"},"id":196.0,"district_id":8.0,"name":"Sinza"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a172"},"id":197.0,"district_id":8.0,"name":"Tandale"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a173"},"id":198.0,"district_id":8.0,"name":"Ubungo"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a174"},"id":199.0,"district_id":9.0,"name":"Azimio"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a175"},"id":200.0,"district_id":9.0,"name":"Chamazi"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a176"},"id":201.0,"district_id":9.0,"name":"Chang'ombe"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a177"},"id":202.0,"district_id":9.0,"name":"Charambe"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a178"},"id":203.0,"district_id":9.0,"name":"Keko"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a179"},"id":204.0,"district_id":9.0,"name":"Kigamboni"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a17a"},"id":205.0,"district_id":9.0,"name":"Kibada"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a17b"},"id":206.0,"district_id":9.0,"name":"Yombo Vituka"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a17c"},"id":207.0,"district_id":9.0,"name":"Kimbiji"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a17d"},"id":208.0,"district_id":9.0,"name":"Kisarawe II"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a17e"},"id":209.0,"district_id":9.0,"name":"Kurasini"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a17f"},"id":210.0,"district_id":9.0,"name":"Makangarawe"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a180"},"id":211.0,"district_id":9.0,"name":"Mbagala"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a181"},"id":212.0,"district_id":9.0,"name":"Mbagala Kuu"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a182"},"id":213.0,"district_id":9.0,"name":"Miburani"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a183"},"id":214.0,"district_id":9.0,"name":"Mjimwema"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a184"},"id":215.0,"district_id":9.0,"name":"Mtoni"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a185"},"id":216.0,"district_id":9.0,"name":"Pemba Mnazi"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a186"},"id":217.0,"district_id":9.0,"name":"Sandali"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a187"},"id":218.0,"district_id":9.0,"name":"Somangira"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a188"},"id":219.0,"district_id":9.0,"name":"Tandika"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a189"},"id":220.0,"district_id":9.0,"name":"Temeke"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a18a"},"id":221.0,"district_id":9.0,"name":"Toangoma"}
+{"_id":{"$oid":"5d8ef064a2b5f05d7a27a18b"},"id":222.0,"district_id":9.0,"name":"Vijibweni"}

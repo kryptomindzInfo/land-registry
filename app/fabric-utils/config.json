@@ -1,0 +1,21 @@
+{
+  "ADMIN_ID": "admin",
+  "ADMIN_EMAIL": "blockchain.hlfabric@gmail.com",
+  "channel": "mychannel",
+  "cc_name": "landreg-cc",
+  "org": {
+    "mspID": "Org1MSP",
+    "caName": "ca.org1.example.com",
+    "ccpPath": [
+      "..",
+      "..",
+      "network",
+      "organizations",
+      "peerOrganizations",
+      "org1.example.com",
+      "connection-org1.json"
+    ],
+    "department": "org1.department1",
+    "userId": "Org1User1"
+  }
+}

@@ -1,0 +1,2 @@
+HOST=http://localhost:8000
+IPFS_HOST=http://localhost:8080

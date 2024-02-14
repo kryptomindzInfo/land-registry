@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- begin::Head -->
+
+<head>
+    <meta charset="utf-8" />
+    <!-- <title>Land Registry Demo | Land Details</title> -->
+    <title>Land Registry Demo</title>
+    <link rel="icon" type="image/x-icon" href="../../images/favicon-32x32.png">
+    <meta name="description" content="Latest updates and statistic charts">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--begin::Fonts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
+    <script>
+        WebFont.load({
+
+            google: {
+                "families": [
+                    "Poppins:300,400,500,600,700"]
+            },
+
+            active: function () {
+
+                sessionStorage.fonts = true;
+            }
+        });
+    </script>
+    <!--end::Fonts -->
+    <!--begin::Page Vendors Styles(used by this page) -->
+    <!--RTL version:<link href="assets/vendors/custom/fullcalendar/fullcalendar.bundle.rtl.css" rel="stylesheet" type="text/css" />-->
+    <!--end::Page Vendors Styles -->
+    <!--begin::Global Theme Styles(used by all pages) -->
+    <link href="../assets/vendors/base/vendors.bundle.css" rel="stylesheet" type="text/css" />
+    <!--RTL version:<link href="assets/vendors/base/vendors.bundle.rtl.css" rel="stylesheet" type="text/css" />-->
+    <link href="../assets/demo/default/base/style.bundle.css" rel="stylesheet" type="text/css" />
+    <!--RTL version:<link href="assets/demo/default/base/style.bundle.rtl.css" rel="stylesheet" type="text/css" />-->
+    <!--end::Global Theme Styles -->
+    <!--begin::Layout Skins(used by all pages) -->
+    <link href="../assets/demo/default/skins/header/base/light.css" rel="stylesheet" type="text/css" />
+    <!--RTL version:<link href="assets/demo/default/skins/header/base/light.rtl.css" rel="stylesheet" type="text/css" />-->
+    <link href="../assets/demo/default/skins/header/menu/light.css" rel="stylesheet" type="text/css" />
+    <!--RTL version:<link href="assets/demo/default/skins/header/menu/light.rtl.css" rel="stylesheet" type="text/css" />-->
+    <link href="../assets/demo/default/skins/brand/navy.css" rel="stylesheet" type="text/css" />
+    <!--RTL version:<link href="assets/demo/default/skins/brand/navy.rtl.css" rel="stylesheet" type="text/css" />-->
+    <link href="../assets/demo/default/skins/aside/navy.css" rel="stylesheet" type="text/css" />
+    <!--RTL version:<link href="assets/demo/default/skins/aside/navy.rtl.css" rel="stylesheet" type="text/css" />-->
+    <!--end::Layout Skins -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<!-- end::Head -->
+<!-- begin::Body -->
+
+<body
+    class="kt-header--fixed kt-header-mobile--fixed kt-subheader--enabled kt-subheader--transparent kt-aside--enabled kt-aside--fixed kt-page--loading">
+    <div class="display-loader">
+        <div class="loader">
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+    <div id="loader-gen-wrapper" style="display: none">
+        <div id="loader-gen-background"></div>
+        <div class="loader-section"></div>
+    </div>
+    <!-- begin:: Root -->
+    <div class="kt-grid kt-grid--hor kt-grid--root">
+        <!-- begin:: Page -->
+        <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--ver kt-page">
+            <!-- begin:: Wrapper -->
+            <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor" id="kt_wrapper">
+                <div class="kt-grid__item kt-grid__item--fluid kt-grid kt-grid--hor">
+
+                    <!-- begin:: Content -->
+                    <div class="kt-content kt-grid__item kt-grid__item--fluid" id="kt_content">
+                        <!--begin::Dashboard 1-->
+
+                        <!--end::Row-->
+                        <!--begin::Row-->
+                        <div class="row pdf_content" id="pdf_content">
+
+                            <div class="col-lg-12 col-xl-12 order-lg-3 order-xl-1">
+                                <!--begin: Personal Information-->
+                                <div class="tab-pane fade show active" id="kt_profile_tab_personal_information"
+                                    role="tabpanel">
+                                    <div class="kt-portlet">
+                                        <div class="kt-portlet__head">
+                                            <div class="kt-portlet__head-label">
+                                                <h3 class="kt-portlet__head-title">
+                                                    Land Information
+                                                </h3>
+                                            </div>
+                                        </div>
+                                        <form class="kt-form kt-form--label-right">
+                                            <div class="kt-portlet__body">
+                                                <div class="kt-section kt-section--first">
+                                                    <div class="kt-section__body">
+
+                                                        <h3 class="kt-section__title kt-section__title-sm"
+                                                            style="border-bottom: 2px solid #eeeef4">
+                                                            Cerificate Info:
+                                                        </h3>
+                                                        <div class="row">
+                                                            <div
+                                                                class="form-group form-group col-md-4 col-lg-4 col-sm-12">
+                                                                <label class=" col-form-label">Certificate Type
+                                                                    :</label>
+
+                                                                <span class="form-control"
+                                                                    id="preview_certificate_type_text"></span>
+                                                            </div>
+                                                            <div
+                                                                class="form-group form-group col-md-4 col-lg-4 col-sm-12 offerdiv">
+                                                                <label class=" col-form-label">Certificate ID ?
+                                                                    :</label>
+                                                                <span class="form-control"
+                                                                    id="preview_has_certificate_text"></span>
+                                                            </div>
+                                                            <div
+                                                                class="form-group form-group col-md-4 col-lg-4 col-sm-12 certi_div">
+                                                                <label class=" col-form-label">Certificate No :</label>
+                                                                <span class="form-control"
+                                                                    id="preview_certificate_no_text"></span>
+                                                            </div>
+                                                        </div>
+
+                                                        <h3 class="kt-section__title kt-section__title-sm"
+                                                            style="border-bottom: 2px solid #eeeef4">
+                                                            Land Location Details:
+                                                        </h3>
+                                                        <div class="row">
+                                                            <div
+                                                                class="form-group form-group col-md-4 col-lg-4 col-sm-12">
+                                                                <label class=" col-form-label">Region :</label>
+                                                                <span class="form-control"
+                                                                    id="preview_region_text"></span>
+                                                            </div>
+                                                            <div
+                                                                class="form-group form-group col-md-4 col-lg-4 col-sm-12">
+                                                                <label class=" col-form-label">District :</label>
+                                                                <span class="form-control"
+                                                                    id="preview_district_text"></span>
+                                                            </div>
+                                                            <div
+                                                                class="form-group form-group col-md-4 col-lg-4 col-sm-12">
+                                                                <label class=" col-form-label">Ward :</label>
+                                                                <span class="form-control"
+                                                                    id="preview_ward_no_text"></span>
+                                                            </div>
+                                                            <div
+                                                                class="form-group form-group col-md-4 col-lg-4 col-sm-12 digi_div">
+                                                                <label class=" col-form-label">Plot :</label>
+                                                                <span class="form-control"
+                                                                    id="preview_plot_no_text"></span>
+                                                            </div>
+                                                            <div
+                                                                class="form-group form-group col-md-4 col-lg-4 col-sm-12 digi_div">
+                                                                <label class=" col-form-label">Block :</label>
+                                                                <span class="form-control"
+                                                                    id="preview_block_no_text"></span>
+                                                            </div>
+                                                            <div
+                                                                class="form-group form-group col-md-4 col-lg-4 col-sm-12 digi_div">
+                                                                <label class=" col-form-label">Land Address :</label>
+                                                                <span class="form-control"
+                                                                    id="preview_address_text"></span>
+                                                            </div>
+                                                            <div
+                                                                class="form-group form-group col-md-4 col-lg-4 col-sm-12 digi_div">
+                                                                <label class=" col-form-label">location :</label>
+                                                                <span class="form-control"
+                                                                    id="preview_location_text"></span>
+                                                            </div>
+                                                            <div
+                                                                class="form-group form-group col-md-4 col-lg-4 col-sm-12 digi_div">
+                                                                <label class=" col-form-label">Land Distinct Feature
+                                                                    :</label>
+                                                                <span class="form-control"
+                                                                    id="preview_feature_text"></span>
+                                                            </div>
+                                                            <div
+                                                                class="form-group form-group col-md-4 col-lg-4 col-sm-12 nondigi_div">
+                                                                <label class=" col-form-label">Village :</label>
+                                                                <span class="form-control"
+                                                                    id="preview_village_text"></span>
+                                                            </div>
+                                                            <div
+                                                                class="form-group form-group col-md-4 col-lg-4 col-sm-12 nondigi_div">
+                                                                <label class=" col-form-label">Kitongoji :</label>
+                                                                <span class="form-control"
+                                                                    id="preview_kitongoji_text"></span>
+                                                            </div>
+
+                                                        </div>
+                                                        <h3 class="kt-section__title kt-section__title-sm"
+                                                            style="border-bottom: 2px solid #eeeef4">
+                                                            Land Boundary Details:
+                                                        </h3>
+                                                        <div class="row">
+                                                            <div
+                                                                class="form-group form-group col-md-4 col-lg-4 col-sm-12 ">
+                                                                <label class=" col-form-label">North :</label>
+                                                                <span class="form-control"
+                                                                    id="preview_parcel_north_text"></span>
+                                                            </div>
+                                                            <div
+                                                                class="form-group form-group col-md-4 col-lg-4 col-sm-12 ">
+                                                                <label class=" col-form-label">South :</label>
+                                                                <span class="form-control"
+                                                                    id="preview_parcel_south_text"></span>
+                                                            </div>
+                                                            <div
+                                                                class="form-group form-group col-md-4 col-lg-4 col-sm-12 ">
+                                                                <label class=" col-form-label">East :</label>
+                                                                <span class="form-control"
+                                                                    id="preview_parcel_east_text"></span>
+                                                            </div>
+                                                            <div
+                                                                class="form-group form-group col-md-4 col-lg-4 col-sm-12 ">
+                                                                <label class=" col-form-label">West :</label>
+                                                                <span class="form-control"
+                                                                    id="preview_parcel_west_text"></span>
+                                                            </div>
+                                                        </div>
+                                                        <h3 class="kt-section__title kt-section__title-sm"
+                                                            style="border-bottom: 2px solid #eeeef4">
+                                                            Land Dimension Details:
+                                                        </h3>
+                                                        <div class="row">
+                                                            <div
+                                                                class="form-group form-group col-md-4 col-lg-4 col-sm-12 ">
+                                                                <label class=" col-form-label">Length : (in
+                                                                    meter)</label>
+                                                                <span class="form-control"
+                                                                    id="preview_length_text"></span>
+                                                            </div>
+                                                            <div
+                                                                class="form-group form-group col-md-4 col-lg-4 col-sm-12 ">
+                                                                <label class=" col-form-label">Breadth : (in
+                                                                    meter)</label>
+                                                                <span class="form-control"
+                                                                    id="preview_breadth_text"></span>
+                                                            </div>
+                                                            <div
+                                                                class="form-group form-group col-md-4 col-lg-4 col-sm-12 ">
+                                                                <label class=" col-form-label">Area : (in sq.m)</label>
+                                                                <span class="form-control"
+                                                                    id="preview_area_text"></span>
+                                                            </div>
+                                                        </div>
+                                                        <h3 class="kt-section__title kt-section__title-sm"
+                                                            style="border-bottom: 2px solid #eeeef4">
+                                                            Parcel Position and Drawing Details:
+                                                        </h3>
+                                                        <div class="row">
+                                                            <!-- <div class="form-group form-group col-md-4 col-lg-4 col-sm-12 nondigi_div">
+                                                                    <label class=" col-form-label">Length : (in meter)</label>
+                                                                    <span class="form-control" id="preview_parcel_north_text"></span>
+                                                                </div>
+                                                                <div class="form-group form-group col-md-4 col-lg-4 col-sm-12 nondigi_div">
+                                                                    <label class=" col-form-label">Breadth : (in meter)</label>
+                                                                    <span class="form-control" id="preview_parcel_south_text"></span>
+                                                                </div> -->
+                                                            <div
+                                                                class="form-group form-group col-md-4 col-lg-4 col-sm-12 ">
+                                                                <label class=" col-form-label">Marked Area : (in
+                                                                    sq.m)</label>
+                                                                <span class="form-control"
+                                                                    id="preview_marked_area_text"></span>
+                                                            </div>
+                                                        </div>
+                                                        <h3 class="kt-section__title kt-section__title-sm"
+                                                            style="border-bottom: 2px solid #eeeef4">
+                                                            Land Coordinates:
+                                                        </h3>
+                                                        <div class="table-responsive">
+                                                            <table
+                                                                class="table table-bordered table-striped table-hover"
+                                                                id="lat_lng_table">
+                                                                <thead class="thead-dark">
+                                                                    <tr>
+                                                                        <th>S.No.</th>
+                                                                        <th>Latitude</th>
+                                                                        <th>Longitude</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody id="lat_lng_table_body">
+
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                        <h3 class="kt-section__title kt-section__title-sm"
+                                                            style="border-bottom: 2px solid #eeeef4">
+                                                            Land Map:
+                                                        </h3>
+                                                        <div class="col-lg-12 map_div">
+                                                            <div id="preview-map-marker_text" style="height: 200px">
+                                                            </div>
+                                                            <div id="legend"></div>
+                                                            <input type="hidden" step="any" id="array_lat_lng_text"
+                                                                class="form-control" placeholder="Search Address">
+                                                            <input type="hidden" step="any" id="lat_input_text"
+                                                                class="form-control" placeholder="Search Address">
+                                                            <input type="hidden" step="any" id="lng_input_text"
+                                                                class="form-control" placeholder="Search Address">
+                                                            <input type="hidden" step="any" id="map_zoom"
+                                                                class="form-control" placeholder="Search Address">
+                                                        </div>
+                                                        <h3 class="kt-section__title kt-section__title-sm"
+                                                            style="border-bottom: 2px solid #eeeef4">
+                                                            Land Purpose Info:
+                                                        </h3>
+                                                        <div class="row">
+                                                            <div class="form-group col-md-4 col-lg-4 col-sm-12 ">
+                                                                <label class=" col-form-label">Land Purpose : </label>
+                                                                <span class="form-control"
+                                                                    id="preview_land_purpose_text"></span>
+                                                            </div>
+                                                            <div
+                                                                class="form-group col-md-4 col-lg-4 col-sm-12 resi_type">
+                                                                <label class=" col-form-label">Type : </label>
+                                                                <span class="form-control"
+                                                                    id="preview_residence_type_text"></span>
+                                                            </div>
+                                                            <div
+                                                                class="form-group col-md-4 col-lg-4 col-sm-12 commer_type">
+                                                                <label class=" col-form-label">Type : </label>
+                                                                <span class="form-control"
+                                                                    id="preview_commercial_type_text"></span>
+                                                            </div>
+                                                        </div>
+                                                        <h3 class="kt-section__title kt-section__title-sm"
+                                                            style="border-bottom: 2px solid #eeeef4">
+                                                            Ownership Info:
+                                                        </h3>
+                                                        <div class="row">
+                                                            <div class="form-group col-md-4 col-lg-4 col-sm-12 ">
+                                                                <label class=" col-form-label">Ownership Type : </label>
+                                                                <span class="form-control"
+                                                                    id="preview_ownership_type_text"></span>
+                                                            </div>
+                                                            <div class="preview_owner_data_text"></div>
+                                                            <div
+                                                                class="form-group col-md-4 col-lg-4 col-sm-12 digi_div">
+                                                                <label class=" col-form-label">Lease Term : </label>
+                                                                <span class="form-control"
+                                                                    id="preview_lease_term_text"></span>
+                                                            </div>
+                                                            <div
+                                                                class="form-group col-md-4 col-lg-4 col-sm-12 digi_div">
+                                                                <label class=" col-form-label">Lease Term Start Date :
+                                                                </label>
+                                                                <span class="form-control"
+                                                                    id="preview_lease_start_date_text"></span>
+                                                            </div>
+                                                            <div
+                                                                class="form-group col-md-4 col-lg-4 col-sm-12 nondigi_div">
+                                                                <label class=" col-form-label">Lease Type : </label>
+                                                                <span class="form-control"
+                                                                    id="preview_lease_type_text"></span>
+                                                            </div>
+                                                            <div
+                                                                class="form-group col-md-4 col-lg-4 col-sm-12 nondigi_div">
+                                                                <label class=" col-form-label">Term (years) : </label>
+                                                                <span class="form-control"
+                                                                    id="preview_term_years_text"></span>
+                                                            </div>
+                                                        </div>
+                                                        <h3 class="kt-section__title kt-section__title-sm"
+                                                            style="border-bottom: 2px solid #eeeef4">
+                                                            Upload Info:
+                                                        </h3>
+                                                        <div class="row">
+                                                            <div class="preview_upload_data_text"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <!--end: Personal Information-->
+                            </div>
+
+                        </div>
+                        <!-- <button id="preview_print_btn">print</button> -->
+                        <!--end::Row-->
+                        <!--end::Dashboard 1-->
+
+                    </div>
+                    <!-- end:: Content -->
+                </div>
+            </div>
+            <!-- end:: Wrapper -->
+        </div>
+        <!-- end:: Page -->
+    </div>
+    <!-- end:: Root -->
+    <!-- begin::Global Config(global config for global JS sciprts) -->
+    <script>
+        var KTAppOptions = {
+
+            "colors": {
+
+                "state": {
+
+                    "brand": "#5d78ff",
+
+                    "metal": "#c4c5d6",
+
+                    "light": "#ffffff",
+
+                    "accent": "#00c5dc",
+
+                    "primary": "#5867dd",
+
+                    "success": "#34bfa3",
+
+                    "info": "#36a3f7",
+
+                    "warning": "#ffb822",
+
+                    "danger": "#fd3995",
+
+                    "focus": "#9816f4"
+                },
+
+                "base": {
+
+                    "label": [
+
+                        "#c5cbe3",
+
+                        "#a1a8c3",
+
+                        "#3d4465",
+
+                        "#3e4466"
+                    ],
+
+                    "shape": [
+
+                        "#f0f3ff",
+
+                        "#d9dffa",
+
+                        "#afb4d4",
+
+                        "#646c9a"
+                    ]
+                }
+            }
+        };
+    </script>
+    <!-- end::Global Config -->
+    <!--begin::Global Theme Bundle(used by all pages) -->
+    <script src="../../js/jquery-3.3.1.min.js" type="text/javascript"></script>
+    <script src="../../js/events.js" type="text/javascript"></script>
+    <script src="../assets/vendors/base/vendors.bundle.js" type="text/javascript"></script>
+    <script src="../assets/demo/default/base/scripts.bundle.js" type="text/javascript"></script>
+
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAofX76hfImORJU_rsNCEapJF7yHDGT8n0&libraries=places"></script>
+
+    <!--end::Global Theme Bundle -->
+    <!--begin::Page Vendors(used by this page) -->
+    <!-- <script src="../assets/vendors/custom/fullcalendar/fullcalendar.bundle.js" type="text/javascript"></script> -->
+    <!--end::Page Vendors -->
+    <!--begin::Page Scripts(used by this page) -->
+    <script type="text/javascript" src="../../js/events.js"></script>
+    <script type="text/javascript" src="../../js/pdfdatageneral.js"></script>
+    <script type="text/javascript" src="../../js/map-cluster/pdflandmap.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+    <!-- <script src="../assets/app/custom/general/dashboard.js" type="text/javascript"></script> -->
+    <!--end::Page Scripts -->
+    <!--begin::Global App Bundle(used by all pages) -->
+    <script src="../assets/app/bundle/app.bundle.js" type="text/javascript"></script>
+    <!-- <script src="../assets/app/custom/general/components/forms/widgets/bootstrap-datepicker.js" type="text/javascript"></script> -->
+
+    <!--end::Global App Bundle -->
+</body>
+<!-- end::Body -->
+
+</html>

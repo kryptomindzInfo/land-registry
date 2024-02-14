@@ -1,0 +1,1079 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Land Registry Demo</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon-32x32.png">
+
+
+    <!-- <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+        integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+        crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.3.0/dist/MarkerCluster.css" />
+    <link rel="stylesheet" href="css/MarkerCluster.Default.css" /> -->
+    <!-- <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+        integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+        crossorigin=""></script> -->
+    <!-- <script src="https://unpkg.com/leaflet.markercluster@1.3.0/dist/leaflet.markercluster.js"></script>
+    <script src="js/map-cluster/BoundaryCanvas.js"></script>
+    <script src="js/map-cluster/Markers.js"></script> -->
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="js/lib/slick/slick.css">
+    <link rel="stylesheet" href="js/lib/slick/slick-theme.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="css/color.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+
+    <div class="display-loader">
+        <div class="loader">
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </div>
+
+    <div id="loader-gen-wrapper" style="display: none">
+        <div id="loader-gen-background"></div>
+        <div class="loader-section"></div>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a class="closebtn" id="nav_close_btn">&times;</a>
+        <div class="row">
+            <div class="col-lg-12 heading_info_div center_text_div">
+                <h1 class="">
+                    Land Information
+                </h1>
+            </div>
+            <div class="col-lg-12 center_text_div side_nav_detail_div">
+                <div class="exl-subtitle exl-header-title details_div"
+                    style="flex-direction: row; box-sizing: border-box; display: flex;">
+                    <div class="empty_div"></div>
+                    <p class="rm8" style="flex: 1 1 0%; box-sizing: border-box;">Owner Name :</p>
+                    <p class="ng-tns-c5-10" id="owner_name_text" style="flex: 1 1 0%; box-sizing: border-box;"></p>
+                </div>
+                <div class="exl-subtitle exl-header-title details_div cert_div"
+                    style="flex-direction: row; box-sizing: border-box; display: flex;">
+                    <div class="empty_div"></div>
+                    <p class="rm8" style="flex: 1 1 0%; box-sizing: border-box;">Certificate Type :</p>
+                    <p class="ng-tns-c5-10" id="certificate_type_text" style="flex: 1 1 0%; box-sizing: border-box;">
+                    </p>
+                </div>
+                <div class="exl-subtitle exl-header-title details_div"
+                    style="flex-direction: row; box-sizing: border-box; display: flex;">
+                    <div class="empty_div"></div>
+                    <p class="rm8" style="flex: 1 1 0%; box-sizing: border-box;">Certificate No. :</p>
+                    <p class="ng-tns-c5-10" id="certificate_no_text" style="flex: 1 1 0%; box-sizing: border-box;"></p>
+                </div>
+                <div class="exl-subtitle exl-header-title details_div plot_div"
+                    style="flex-direction: row; box-sizing: border-box; display: flex;">
+                    <div class="empty_div"></div>
+                    <p class="rm8" style="flex: 1 1 0%; box-sizing: border-box;">Plot No. :</p>
+                    <p class="ng-tns-c5-10" id="plot_no_text" style="flex: 1 1 0%; box-sizing: border-box;"></p>
+                </div>
+                <div class="exl-subtitle exl-header-title details_div"
+                    style="flex-direction: row; box-sizing: border-box; display: flex;">
+                    <div class="empty_div"></div>
+                    <p class="rm8" style="flex: 1 1 0%; box-sizing: border-box;">Marked Area :</p>
+                    <p class="ng-tns-c5-10" id="marked_area_text" style="flex: 1 1 0%; box-sizing: border-box;"></p>
+                </div>
+                <div class="exl-subtitle exl-header-title details_div lease_div"
+                    style="flex-direction: row; box-sizing: border-box; display: flex;">
+                    <div class="empty_div"></div>
+                    <p class="rm8" style="flex: 1 1 0%; box-sizing: border-box;">Lease Term :</p>
+                    <p class="ng-tns-c5-10" id="lease_term_text" style="flex: 1 1 0%; box-sizing: border-box;"></p>
+                </div>
+                <div class="exl-subtitle exl-header-title details_div purpose_div"
+                    style="flex-direction: row; box-sizing: border-box; display: flex;">
+                    <div class="empty_div"></div>
+                    <p class="rm8" style="flex: 1 1 0%; box-sizing: border-box;">Land Purpose :</p>
+                    <p class="ng-tns-c5-10" id="purpose_text" style="flex: 1 1 0%; box-sizing: border-box;"></p>
+                </div>
+                <div class="exl-subtitle exl-header-title details_div"
+                    style="flex-direction: row; box-sizing: border-box; display: flex;">
+                    <div class="empty_div"></div>
+                    <p class="rm8" style="flex: 1 1 0%; box-sizing: border-box;">Land Type :</p>
+                    <p class="ng-tns-c5-10" id="type_text" style="flex: 1 1 0%; box-sizing: border-box;"></p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="blocks_div col-lg-12">
+
+                <!-- <div class="row div_main_tx">
+                        <div class="col-lg-1"></div>
+                        <div class="card col-lg-10">
+                        <div class="card-header">
+                            TX 1
+                        </div>
+                        <div class="card-body row">
+                            <div style="margin-right: 24px; margin-top: 4px">
+                                <div class="ng-star-inserted ">
+                                    <i class="fa fa-user-circle" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div >
+                                <div style="flex-direction: row; box-sizing: border-box; display: flex;">
+                                    <p class="exl-title">ASD033727E</p>
+                                </div>
+                                <div style="flex-direction: row; box-sizing: border-box; display: flex;">
+                                    <p class="exl-subtitle exl-naam">Amsterdam</p><p class="exl-subtitle">621 m2</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>   -->
+            </div>
+        </div>
+    </div>
+    <div id="myOverlay" class="overlay">
+        <span class="closebtn" title="Close Overlay">×</span>
+        <div class="overlay-content">
+            <form id="search_by_no_form">
+                <input type="text" id="search_by_no" placeholder="Search By Certificate No." name="search">
+                <button type="submit"><i class="fa fa-search" title=""></i></button>
+            </form>
+        </div>
+    </div>
+    <div class="wrapper half_map">
+
+        <header class="fix">
+            <div class="header shd">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <nav class="navbar navbar-expand-lg navbar-light">
+                                <a class="navbar-brand" href="/">
+                                    <img id="logo" src="images/logo.png" width="150" height="100" alt="">
+                                </a>
+                                <button class="menu-button" type="button" data-toggle="collapse"
+                                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent">
+                                    <span class="icon-spar"></span>
+                                    <span class="icon-spar"></span>
+                                    <span class="icon-spar"></span>
+                                </button>
+
+                                <div class="navbar-collapse" id="navbarSupportedContent">
+                                    <ul class="navbar-nav mr-auto">
+                                        <!-- <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                                                Home
+                                            </a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                                                Features
+                                            </a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                                                Listing
+                                            </a>
+                                        </li>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="" data-toggle="dropdown">
+                                                Pages
+                                            </a>
+                                        </li> -->
+                                    </ul>
+                                    <div class="d-inline my-2 my-lg-0">
+                                        <ul class="navbar-nav">
+                                            <li class="nav-item signin-btn">
+                                                <a href="#" class="nav-link openBtn">
+                                                    <span class="tooltiptext">Search By Certificate No.</span>
+                                                    <i class="la la-search"></i><b class="search_text">Search</b>
+                                                </a>
+                                            </li>
+                                            <li class="nav-item signin-btn">
+                                                <a href="#" class="nav-link">
+                                                    <i class="la la-sign-in"></i>
+                                                    <span><b class="signin-op">Sign in</b> <span style="color: black">
+                                                            or </span> <b class="reg-op">Register</b></span>
+                                                </a>
+
+                                            </li>
+                                            <li class="nav-item submit-btn">
+                                                <a id="submit_listing_a" class="my-2 my-sm-0 nav-link sbmt-btn"
+                                                    style="cursor: pointer;">
+
+                                                    <span>Upcoming Feature</span> <i class="la la-angle-down"></i>
+                                                </a>
+                                                <ul id="feature_details" class="dropdown-menu animated show"
+                                                    style="display: none;height: 250px;overflow-y: scroll;">
+                                                    <li class=""><a href="#" class="dropdown-item"></a>NIDA Integration
+                                                    </li>
+                                                    <li class=""><a href="#" class="dropdown-item"></a>TIC Integration
+                                                    </li>
+                                                    <li class=""><a href="#" class="dropdown-item"></a>Banks Integration
+                                                    </li>
+                                                    <li class=""><a href="#" class="dropdown-item"></a>Land Buy and
+                                                        Selling</li>
+                                                    <li class=""><a href="#" class="dropdown-item"></a>Land Certificate
+                                                        Transfer</li>
+                                                    <li class=""><a href="#" class="dropdown-item"></a>TRA Integration
+                                                    </li>
+                                                    <li class=""><a href="#" class="dropdown-item"></a>Government
+                                                        Agencies Permit Issuer Portal</li>
+                                                    <li class=""><a href="#" class="dropdown-item"></a>Land Mutation
+                                                    </li>
+                                                    <li class=""><a href="#" class="dropdown-item"></a>Legal Portal</li>
+                                                    <li class=""><a href="#" class="dropdown-item"></a>Mobile
+                                                        Application</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <a href="#" title="" class="close-menu"><i class="la la-close"></i></a>
+                                </div>
+
+                            </nav>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--header end-->
+
+
+        <div class="popup" id="sign-popup">
+            <h3>Sign In to your Account</h3>
+            <span id="close_btn" class="close_spn">X</span>
+            <div class="popup-form">
+                <form id="loginForm_direct">
+                    <div class="form-field">
+                        <!-- <div class="row"> -->
+                        <!-- <div class="col-md-9"> -->
+                        <div class="form-field">
+                            <input type="text" id="login_email" name="loginemail" placeholder="User ID">
+                        </div>
+                        <div class="form-field">
+                            <input type="password" id="login_password" name="loginpassword" placeholder="Password">
+                        </div>
+                        <div class="form-cp">
+                            <a id="forget_password_btn" title="" class="">Forgot Password?</a>
+                        </div>
+                        <!-- <div class="col-md-3"> -->
+                        <a class="btn2 direct_signInBtn" id="direct_signInBtn">Login</a>
+
+
+
+                        <!-- </div> -->
+                        <!-- </div> -->
+                    </div>
+                    <!-- <div class="form-field otpField" style="display: none">
+                        <span class="auth_code_msg">Authorization Code has been sent to your email</span>
+                        <input type="password" id="loginotp" name="loginotp" placeholder="Enter Authorization code">
+                        <input type="hidden" id="loginotpserver" name="loginotpserver"
+                            placeholder="Enter Authorization code">
+                    </div> -->
+                    <!-- <div class="form-cp">
+                        <div class="form-field">
+                            <div class="input-field">
+                                <input type="checkbox" name="ccc" id="cc1">
+                                <label for="cc1">
+                                    <span></span>
+                                    <small>Remember me</small>
+                                </label>
+                            </div>
+                        </div>
+                        <a href="#" title="">Forgot Password?</a>
+                    </div> -->
+                    <!--form-cp end-->
+                    <!-- <button type="submit" style="display: none" class="btn2 signinBtn">Login</button> -->
+                </form>
+                <!-- <a href="#" title="" class="fb-btn"> <i class="fa fa-facebook"></i>Sign In With Facebook</a> -->
+            </div>
+        </div>
+
+        <div class="popup" id="forgetpassword-popup">
+            <h3>Reset Your Account's Password</h3>
+            <span id="forget_close_btn" class="close_spn">X</span>
+            <div class="popup-form">
+                <form id="loginForm_direct">
+                    <div class="form-field">
+                        <!-- <div class="row"> -->
+                        <div class="form-field">
+                            <span id="forget_pass_status_span" style="display: none">Your Reset Password link has been
+                                sent to your email.</span>
+                        </div>
+                        <!-- <div class="col-md-9"> -->
+                        <div class="form-field">
+                            <input type="text" id="forget_email" name="forgetemail" placeholder="Email">
+                        </div>
+                        <!-- <div class="col-md-3"> -->
+                        <a class="btn2 direct_signInBtn" id="reset_password_btn">Reset</a>
+                        <!-- </div> -->
+                        <!-- </div> -->
+                        <div class="col-md-12 form-field">
+                            <div class="login-or">
+                                <hr class="hr-or">
+                                <span class="span-or">or</span>
+                            </div>
+                        </div>
+                        <div class="form-field">
+                            <a href="" id="open_auth_popup" class="opt-btn">Login Using Authorization Code</a>
+                        </div>
+                    </div>
+                </form>
+                <!-- <a href="#" title="" class="fb-btn"> <i class="fa fa-facebook"></i>Sign In With Facebook</a> -->
+            </div>
+        </div>
+
+        <div class="popup" id="authsign-popup">
+            <h3>Login Using Authorization Code</h3>
+            <span id="close_btn_auth" class="close_spn">X</span>
+            <div class="popup-form">
+                <form id="loginForm">
+                    <div class="form-field">
+                        <!-- <div class="row"> -->
+                        <!-- <div class="col-md-9"> -->
+                        <div class="form-field">
+                            <input type="text" id="login_email_auth" name="loginemail" placeholder="Email">
+                        </div>
+                        <!-- <div class="col-md-3"> -->
+                        <a href="" id="getOtp_btn" class="opt-btn_auth">Get Authorization Code</a>
+
+                        <!-- </div> -->
+                        <!-- </div> -->
+                    </div>
+                    <div class="form-field otpField" style="display: none">
+                        <span class="auth_code_msg">Authorization Code has been sent to your email</span>
+                        <input type="password" id="loginotp" name="loginotp" placeholder="Enter Authorization code">
+                        <input type="hidden" id="loginotpserver" name="loginotpserver"
+                            placeholder="Enter Authorization code">
+                    </div>
+                    <!-- <div class="form-cp">
+                            <div class="form-field">
+                                <div class="input-field">
+                                    <input type="checkbox" name="ccc" id="cc1">
+                                    <label for="cc1">
+                                        <span></span>
+                                        <small>Remember me</small>
+                                    </label>
+                                </div>
+                            </div>
+                            <a href="#" title="">Forgot Password?</a>
+                        </div> -->
+                    <!--form-cp end-->
+                    <button type="submit" style="display: none" class="btn2 signinBtn">Login</button>
+                </form>
+                <!-- <a href="#" title="" class="fb-btn"> <i class="fa fa-facebook"></i>Sign In With Facebook</a> -->
+            </div>
+        </div>
+        <!--popup end-->
+
+        <div class="popup" id="demographic-popup">
+            <h3>Demographic Details</h3>
+            <span id="close_btn_3" class="close_spn">X</span>
+            <!-- <span id="close_btn" class="close_spn">X</span> -->
+            <div class="popup-form">
+                <form id="demographicForm">
+                    <div class="kt-heading kt-heading--md border_line">
+                        Basic Details:
+                    </div>
+                    <div class="row">
+                        <div class="form-field col-md-4">
+                            <input type="text" id="demo_firstname" name="demofirstname" placeholder="Firstname">
+                            <span class="errorspan" id="demofnspan"></span>
+                        </div>
+                        <div class="form-field col-md-4">
+                            <input type="text" id="demo_middlename" name="demousername" placeholder="Middle Name">
+                            <span class="errorspan" id="demomnspan"></span>
+                        </div>
+                        <div class="form-field col-md-4">
+                            <input type="text" id="demo_lastname" name="demousername" placeholder="Last Name">
+                            <span class="errorspan" id="demolnspan"></span>
+                        </div>
+                        <div class="control col-md-4">
+                            <label class="radio">
+                                <input type="radio" checked name="demo_gender" value=0>
+                                Male
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="demo_gender" value=1>
+                                Female
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="demo_gender" value=2>
+                                Other
+                            </label>
+                        </div>
+                        <div class="control col-md-4">
+                            <label class="radio">
+                                <input type="radio" checked name="demo_marry_status" value=0>
+                                Single
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="demo_marry_status" value=1>
+                                Married
+                            </label>
+                            <label class="radio">
+                                <input type="radio" name="demo_marry_status" value=2>
+                                Divorce
+                            </label>
+                        </div>
+                        <div class="form-field col-md-4">
+                            <input type="text" id="demo_birthdate" name="demodob" placeholder="Date Of Birth">
+                            <span class="errorspan" id="demodobspan"></span>
+                        </div>
+                    </div>
+                    <div class="kt-heading kt-heading--md border_line">
+                        Other Details:
+                    </div>
+                    <div class="row">
+                        <div class="form-field col-md-4">
+                            <input type="text" id="demo_education" name="demoeducation" placeholder="Education">
+                            <span class="errorspan" id="demoeduspan"></span>
+                        </div>
+                        <div class="form-field col-md-4">
+                            <input type="text" id="demo_employment" name="demoemployment" placeholder="Employment">
+                            <span class="errorspan" id="demoempspan"></span>
+                        </div>
+                        <div class="form-field col-md-4">
+                            <input type="text" id="address" name="address" placeholder="Address">
+                            <span class="errorspan" id="demoaddressspan"></span>
+                        </div>
+                        <div class="control col-md-4">
+                            <label class="radio">
+                                <input type="radio" checked name="citizen" value=0>
+                                Tanzanian
+                            </label>
+                            <label class="radio rd1">
+                                <input type="radio" name="citizen" value=1>
+                                Investor
+                            </label>
+                        </div>
+                        <div class="form-field tanzani col-md-4">
+                            <input type="text" id="nationalityid" name="nationalityid" placeholder="Nationality ID">
+                            <span class="errorspan" id="demonationalspan"></span>
+                        </div>
+                        <div class="form-field nontanzani col-md-4">
+                            <input type="text" id="investmentlic" name="investmentlic" placeholder="Investment License">
+                            <span class="errorspan" id="demoinvestspan"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4" style="text-align: center">
+                        </div>
+                        <div class="col-md-4" style="text-align: center">
+                            <button type="submit" class="btn2">Register</button>
+                        </div>
+                        <div class="col-md-4" style="text-align: center">
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <!--popup end-->
+
+        <div class="popup" id="otp-popup">
+            <h3>Please Enter your Authorization Code</h3>
+            <span id="close_btn_2" class="close_spn">X</span>
+            <div class="popup-form">
+                <form id="verifyOtpForm">
+                    <div class="form-field">
+                        <span class="auth_code_msg">Authorization Code has been sent to your email</span>
+                        <input type="password" id="otp" name="otp" placeholder="Authorization Code / Password">
+                        <input type="hidden" id="serverOtp" name="serverOtp" placeholder="OTP">
+                    </div>
+                    <button type="submit" class="btn2">Verify</button>
+                </form>
+            </div>
+        </div>
+        <!--popup end-->
+
+        <div class="popup" id="status-popup">
+            <h3>Land Registry Demo</h3>
+            <span id="close_btn" class="close_spn">X</span>
+            <div class="popup-form">
+                <h3 class="success-span" id="status_text"> </h3>
+                <div class="row btn-row" style="justify-content: center">
+                    <div class="col-md-6 ">
+                        <button id="home_btn" class="btn2">Home</button>
+                    </div>
+                </div>
+                <div class="status_email_msg row">
+                    <span><i class="la la-hand-o-right status_icon"></i></span> <span class="status_email_text">As a
+                        next step you will receive an approval email when the verification is complete. You will then be
+                        able to register your Land details to the <span class="landreg_text">Land Registry Demo</span>
+                        system.<br><br>
+
+                        Thankyou!</span>
+                </div>
+            </div>
+        </div>
+        <!--popup end-->
+
+        <div class="popup" id="register-popup">
+            <h3>Register</h3>
+            <span id="close_btn_register" class="close_spn">X</span>
+            <div class="popup-form">
+                <form id="basicForm">
+                    <div class="form-field">
+                        <select id="usertype" name="usertype">
+                            <option disabled>Select</option>
+                            <option value=0 selected>General</option>
+                            <option value=1>Goverment Authorized User</option>
+                        </select>
+                    </div>
+                    <div class="form-field ">
+                        <input type="text" id="user_id" name="user_id" placeholder="User ID">
+                        <span class="errorspan" id="useridspan"></span>
+                    </div>
+                    <div class="form-field gen">
+                        <input type="text" id="genemail" name="email" placeholder="Email">
+                        <span class="errorspan" id="genemailspan"></span>
+                    </div>
+                    <div class="form-field gen">
+                        <input type="text" id="genmobile" name="mobile" placeholder="Mobile No." onpaste="return false;"
+                            ondrop="return false;">
+                        <span class="errorspan" id="genmobilespan"></span>
+                    </div>
+                    <!-- <div class="form-field gen">
+                        <input type="password" id="genpassword" name="password" placeholder="Password">
+                        <span class="errorspan" id="genpasswordspan"></span>
+                    </div> -->
+
+                    <div class="form-field gov">
+                        <input type="text" id="govemail" name="govemail" placeholder="Enter Govt. Email ID">
+                        <input type="hidden" id="errorstatus">
+                        <span class="errorspan" id="govemailspan"></span>
+                    </div>
+                    <div class="form-field gov">
+                        <input type="text" id="govmobile" name="authmobile" placeholder="Mobile No."
+                            onpaste="return false;" ondrop="return false;">
+                        <span class="errorspan" id="govmobspan"></span>
+                    </div>
+                    <div class="form-field gov">
+                        <select id="govdepartment" name="department">
+                            <option value="">Select your department</option>
+                            <option value="Agriculture">Agriculture</option>
+                            <option value="Rural Development">Rural Development</option>
+                        </select>
+                        <span class="errorspan" id="govdepspan"></span>
+                    </div>
+                    <div class="form-field gov">
+                        <input type="text" id="govdesignation" name="designation" placeholder="Designation">
+                        <span class="errorspan" id="govdesigspan"></span>
+                    </div>
+                    <div class="form-field">
+                        <input type="password" id="password" name="authpassword" placeholder="Password">
+                        <span class="errorspan" id="passspan"></span>
+                    </div>
+                    <div class="form-cp">
+                        <a href="#" title="" class="signin-op">Have an account?</a>
+                    </div>
+                    <!--form-cp end-->
+                    <button type="submit" id="basicDBtn" class="btn2">Next</button>
+                </form>
+            </div>
+        </div>
+        <!--popup end-->
+
+        <section class="half-map-sec">
+            <div class="container">
+                <div class="row">
+                    <div id="maincontainer" class="col-xl-12 col-lg-12">
+                        <div id="map-container" class="fullwidth-home-map">
+                            <div id="mapid" data-map-zoom="9"></div>
+                            <div id="legend"></div>
+                            <!-- <div id="drawer-btn-container">
+                                <button class="drawer-btn"><i class="fa fa-bars"></i></button>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div id="listing" style="padding-bottom: 50px; padding-top: 25px;display: none"
+                        class="col-xl-4 col-lg-12">
+                        <div class="listing-directs">
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="grid-view-tab1" role="tabpanel"
+                                    aria-labelledby="grid-view-tab1">
+                                    <div class="list_products">
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12">
+                                                <div class="card">
+                                                    <a href="#" title="">
+                                                        <div class="img-block">
+                                                            <div class="overlay"></div>
+                                                            <img src="images/card0.png" alt="" class="img-fluid">
+                                                            <div class="rate-info">
+                                                                <h5>Contact Owner</h5>
+                                                                <span></span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <div class="card-body">
+                                                        <a id="card1">
+                                                            <h3>Traditional Apartments</h3>
+                                                            <p>
+                                                                <i class="la la-map-marker"></i>212 5th Ave, New York
+                                                            </p>
+                                                        </a>
+                                                        <ul>
+                                                            <li>3 Bathrooms</li>
+                                                            <li>2 Beds</li>
+                                                            <li>Area 555 Sq Ft</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <a href="#" class="pull-left">
+                                                            <i class="la la-heart-o"></i>
+                                                        </a>
+                                                        <a href="#" class="pull-right">
+                                                            <i class="la la-calendar-check-o"></i> 25 Days Ago</a>
+                                                    </div>
+                                                    <!-- <a href="24_Property_Single.html" title="" class="ext-link"></a> -->
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <div class="card">
+                                                    <a href="24_Property_Single.html" title="">
+                                                        <div class="img-block">
+                                                            <div class="overlay"></div>
+                                                            <img src="images/card3.png" alt="" class="img-fluid">
+                                                            <div class="rate-info">
+                                                                <h5>Contact Owner</h5>
+                                                                <span></span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <div class="card-body">
+                                                        <a id="card2" title="">
+                                                            <h3>Traditional Apartments</h3>
+                                                            <p>
+                                                                <i class="la la-map-marker"></i>212 5th Ave, New York
+                                                            </p>
+                                                        </a>
+                                                        <ul>
+                                                            <li>3 Bathrooms</li>
+                                                            <li>2 Beds</li>
+                                                            <li>Area 555 Sq Ft</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <a href="#" class="pull-left">
+                                                            <i class="la la-heart-o"></i>
+                                                        </a>
+                                                        <a href="#" class="pull-right">
+                                                            <i class="la la-calendar-check-o"></i> 25 Days Ago</a>
+                                                    </div>
+                                                    <!-- <a href="24_Property_Single.html" title="" class="ext-link"></a> -->
+                                                </div>
+                                            </div>
+                                            <!-- <div class="col-lg-12 col-md-12">
+                                                <div class="card">
+                                                    <a href="24_Property_Single.html" title="">
+                                                        <div class="img-block">
+                                                            <div class="overlay"></div>
+                                                            <img src="https://via.placeholder.com/370x295" alt="" class="img-fluid">
+                                                            <div class="rate-info">
+                                                                <h5>$550.000</h5>
+                                                                <span>For Rent</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <div class="card-body">
+                                                        <a href="24_Property_Single.html" title="">
+                                                            <h3>Traditional Apartments</h3>
+                                                            <p>
+                                                                <i class="la la-map-marker"></i>212 5th Ave, New York
+                                                            </p>
+                                                        </a>
+                                                        <ul>
+                                                            <li>3 Bathrooms</li>
+                                                            <li>2 Beds</li>
+                                                            <li>Area 555 Sq Ft</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <a href="#" class="pull-left">
+                                                            <i class="la la-heart-o"></i>
+                                                        </a>
+                                                        <a href="#" class="pull-right">
+                                                            <i class="la la-calendar-check-o"></i> 25 Days Ago</a>
+                                                    </div>
+                                                    <a href="24_Property_Single.html" title="" class="ext-link"></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <div class="card">
+                                                    <a href="24_Property_Single.html" title="">
+                                                        <div class="img-block">
+                                                            <div class="overlay"></div>
+                                                            <img src="https://via.placeholder.com/370x295" alt="" class="img-fluid">
+                                                            <div class="rate-info">
+                                                                <h5>$550.000</h5>
+                                                                <span>For Rent</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <div class="card-body">
+                                                        <a href="24_Property_Single.html" title="">
+                                                            <h3>Traditional Apartments</h3>
+                                                            <p>
+                                                                <i class="la la-map-marker"></i>212 5th Ave, New York
+                                                            </p>
+                                                        </a>
+                                                        <ul>
+                                                            <li>3 Bathrooms</li>
+                                                            <li>2 Beds</li>
+                                                            <li>Area 555 Sq Ft</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <a href="#" class="pull-left">
+                                                            <i class="la la-heart-o"></i>
+                                                        </a>
+                                                        <a href="#" class="pull-right">
+                                                            <i class="la la-calendar-check-o"></i> 25 Days Ago</a>
+                                                    </div>
+                                                    <a href="24_Property_Single.html" title="" class="ext-link"></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <div class="card">
+                                                    <a href="24_Property_Single.html" title="">
+                                                        <div class="img-block">
+                                                            <div class="overlay"></div>
+                                                            <img src="https://via.placeholder.com/370x295" alt="" class="img-fluid">
+                                                            <div class="rate-info">
+                                                                <h5>$550.000</h5>
+                                                                <span>For Rent</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <div class="card-body">
+                                                        <a href="24_Property_Single.html" title="">
+                                                            <h3>Traditional Apartments</h3>
+                                                            <p>
+                                                                <i class="la la-map-marker"></i>212 5th Ave, New York
+                                                            </p>
+                                                        </a>
+                                                        <ul>
+                                                            <li>3 Bathrooms</li>
+                                                            <li>2 Beds</li>
+                                                            <li>Area 555 Sq Ft</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <a href="#" class="pull-left">
+                                                            <i class="la la-heart-o"></i>
+                                                        </a>
+                                                        <a href="#" class="pull-right">
+                                                            <i class="la la-calendar-check-o"></i> 25 Days Ago</a>
+                                                    </div>
+                                                    <a href="24_Property_Single.html" title="" class="ext-link"></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 col-md-12">
+                                                <div class="card">
+                                                    <a href="24_Property_Single.html" title="">
+                                                        <div class="img-block">
+                                                            <div class="overlay"></div>
+                                                            <img src="https://via.placeholder.com/370x295" alt="" class="img-fluid">
+                                                            <div class="rate-info">
+                                                                <h5>$550.000</h5>
+                                                                <span>For Rent</span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <div class="card-body">
+                                                        <a href="24_Property_Single.html" title="">
+                                                            <h3>Traditional Apartments</h3>
+                                                            <p>
+                                                                <i class="la la-map-marker"></i>212 5th Ave, New York
+                                                            </p>
+                                                        </a>
+                                                        <ul>
+                                                            <li>3 Bathrooms</li>
+                                                            <li>2 Beds</li>
+                                                            <li>Area 555 Sq Ft</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <a href="#" class="pull-left">
+                                                            <i class="la la-heart-o"></i>
+                                                        </a>
+                                                        <a href="#" class="pull-right">
+                                                            <i class="la la-calendar-check-o"></i> 25 Days Ago</a>
+                                                    </div>
+                                                    <a href="24_Property_Single.html" title="" class="ext-link"></a>
+                                                </div>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                    <!--list_products end-->
+
+                                </div>
+                                <div class="tab-pane fade" id="grid-view-tab2" role="tabpanel"
+                                    aria-labelledby="grid-view-tab2">
+                                    <div class="list_products">
+                                        <div class="row">
+                                            <div class="col-lg-12 col-md-12">
+                                                <div class="card">
+                                                    <a href="#" title="">
+                                                        <div class="img-block">
+                                                            <div class="overlay"></div>
+                                                            <img src="images/card0.png" alt="" class="img-fluid">
+                                                            <div class="rate-info">
+                                                                <h5>Contact Owner</h5>
+                                                                <span></span>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <div class="card-body">
+                                                        <a id="card1">
+                                                            <h3>Traditional Apartments</h3>
+                                                            <p>
+                                                                <i class="la la-map-marker"></i>212 5th Ave, New York
+                                                            </p>
+                                                        </a>
+                                                        <ul>
+                                                            <li>3 Bathrooms</li>
+                                                            <li>2 Beds</li>
+                                                            <li>Area 555 Sq Ft</li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="card-footer">
+                                                        <a href="#" class="pull-left">
+                                                            <i class="la la-heart-o"></i>
+                                                        </a>
+                                                        <a href="#" class="pull-right">
+                                                            <i class="la la-calendar-check-o"></i> 25 Days Ago</a>
+                                                    </div>
+                                                    <!-- <a href="24_Property_Single.html" title="" class="ext-link"></a> -->
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!--list_products end-->
+                                </div>
+                            </div>
+                            <!--tab-content end-->
+                            <div class="view-change">
+                                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                    <li class="nav-item">
+                                        <a class="nav-link active" id="grid-tab1" data-toggle="tab"
+                                            href="#grid-view-tab1" role="tab" aria-controls="grid-view-tab1"
+                                            aria-selected="true">1</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="grid-tab2" data-toggle="tab" href="#grid-view-tab2"
+                                            role="tab" aria-controls="grid-view-tab2" aria-selected="true">2</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--pagination end-->
+                        </div>
+                        <!--listing-directs end-->
+                    </div>
+                </div>
+
+                <div class="banner_form">
+                    <div class="container">
+                        <form class="row banner-search">
+                            <div class="form_field addres">
+                                <input id="autocomplete_search" type="text" class="form-control"
+                                    placeholder="Enter Address, City or State">
+                                <input type="hidden" name="lat">
+                                <input type="hidden" name="long">
+                            </div>
+                            <div class="form_field srch-btn">
+                                <a class="btn btn-outline-primary search_btn">
+                                    <i class="la la-search"></i>
+                                    <span>Search</span>
+                                </a>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--half-map-sec end-->
+        <div class="modal fade" id="details_show_modal" tabindex="-1" role="dialog"
+            aria-labelledby="preview_details_title" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-dialog-scrollable" role="document" style="width:500px">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="heading_text">
+                            Please Enter your Authorization Code
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span> </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="col-lg-12 center_text_div popup_detail_div">
+                            <!-- <div class="exl-subtitle exl-header-title details_div" -->
+                            <!-- style="flex-direction: row; box-sizing: border-box; display: flex;"> -->
+                            <!-- <div class="empty_div"></div> -->
+                            <!-- <p class="rm8 heading_class_details" style="flex: 0.4 1 0%; box-sizing: border-box;"> -->
+                            <!-- Block No :</p> -->
+                            <!-- <p class="ng-tns-c5-10 value_class_details" id="block_no_text" -->
+                            <!-- style="flex: 1 1 0%; box-sizing: border-box;"></p> -->
+                        </div>
+                        <div class="exl-subtitle exl-header-title details_div"
+                            style="flex-direction: row; box-sizing: border-box; display: flex;">
+                            <div class="empty_div"></div>
+                            <p class="rm8 heading_class_details" style="flex: 0.4 1 0%; box-sizing: border-box;">
+                                Transaction Id :</p>
+                            <p class="ng-tns-c5-10 value_class_details" id="transaction_id_text"
+                                style="flex: 1 1 0%; box-sizing: border-box;"></p>
+                        </div>
+                        <!-- <div class="exl-subtitle exl-header-title details_div" -->
+                        <!-- style="flex-direction: row; box-sizing: border-box; display: flex;"> -->
+                        <!-- <div class="empty_div"></div> -->
+                        <!-- <p class="rm8 heading_class_details" style="flex: 0.4 1 0%; box-sizing: border-box;"> -->
+                        <!-- Previous Hash :</p> -->
+                        <!-- <p class="ng-tns-c5-10 value_class_details" id="prev_hash_text" -->
+                        <!-- style="flex: 1 1 0%; box-sizing: border-box;"></p> -->
+                        <!-- </div> -->
+                        <!-- <div class="exl-subtitle exl-header-title details_div " -->
+                        <!-- style="flex-direction: row; box-sizing: border-box; display: flex;"> -->
+                        <!-- <div class="empty_div"></div> -->
+                        <!-- <p class="rm8 heading_class_details" style="flex: 0.4 1 0%; box-sizing: border-box;"> -->
+                        <!-- Current Hash:</p> -->
+                        <!-- <p class="ng-tns-c5-10 value_class_details" id="current_hash_text" -->
+                        <!-- style="flex: 1 1 0%; box-sizing: border-box;"></p> -->
+                        <!-- </div> -->
+                        <div class="exl-subtitle exl-header-title details_div"
+                            style="flex-direction: row; box-sizing: border-box; display: flex;">
+                            <div class="empty_div"></div>
+                            <p class="rm8 heading_class_details" style="flex: 0.4 1 0%; box-sizing: border-box;">
+                                Endorser :</p>
+                            <p class="ng-tns-c5-10 value_class_details" id="endorser_text"
+                                style="flex: 1 1 0%; box-sizing: border-box;"></p>
+                        </div>
+                        <div class="exl-subtitle exl-header-title details_div"
+                            style="flex-direction: row; box-sizing: border-box; display: flex;">
+                            <div class="empty_div"></div>
+                            <p class="rm8 heading_class_details" style="flex: 0.4 1 0%; box-sizing: border-box;">
+                                Status :</p>
+                            <p class="ng-tns-c5-10 value_class_details" id="app_status_text"
+                                style="flex: 1 1 0%; box-sizing: border-box;"></p>
+                        </div>
+                        <div class="exl-subtitle exl-header-title details_div"
+                            style="flex-direction: row; box-sizing: border-box; display: flex;">
+                            <div class="empty_div"></div>
+                            <p class="rm8 heading_class_details" style="flex: 0.4 1 0%; box-sizing: border-box;">
+                                Time Stamp :</p>
+                            <p class="ng-tns-c5-10 value_class_details" id="time_stamp_text"
+                                style="flex: 1 1 0%; box-sizing: border-box;"></p>
+                        </div>
+                        <div class="exl-subtitle exl-header-title details_div certificate_div"
+                            style="flex-direction: row; box-sizing: border-box; display: flex;">
+                            <div class="empty_div"></div>
+                            <p class="rm8 heading_class_details" style="flex: 0.4 1 0%; box-sizing: border-box;">
+                                Digitally Signed By :</p>
+                        </div>
+                        <div class="exl-subtitle exl-header-title details_div certificate_div"
+                            style="flex-direction: row; box-sizing: border-box; display: flex;">
+                            <div class="empty_div"></div>
+                            <div style="flex: 0.8 1 0%; box-sizing: border-box;">
+                                <img src="./images/ssl-certificate.png" style="width: 92px; height: 85px; " />
+                            </div>
+                            <div class="res_certificate_derails">
+                                <p class="ng-tns-c5-10 heading_class_details" id="cert_issue_text"
+                                    style="flex: 1 1 0%; box-sizing: border-box;">asdsda</p>
+                                <p class="ng-tns-c5-10 value_class_details" id="issued_by_text"
+                                    style="flex: 1 1 0%; box-sizing: border-box;">Issued by: Let's Encrypt Authority
+                                    X3</p>
+                                <p class="ng-tns-c5-10 value_class_details" id="expires_text"
+                                    style="flex: 1 1 0%; box-sizing: border-box;">Expires: </p>
+                                <p class="ng-tns-c5-10 value_class_details" id="valid_text"
+                                    style="flex: 1 1 0%; box-sizing: border-box;"><i
+                                        class="fa fa-check-circle check_icon" aria-hidden="true"></i> This
+                                    certificate is valid </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-brand" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="modal fade" id="feature_modal" tabindex="-1" role="dialog" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="heading_text">
+                    List of Upcoming Features
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">×</span> </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal_main_container">
+                        <ol type="1">
+                        <li>Mutation of Land</li>
+                        <li>Sale of Land</li>
+                    </ol>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-brand"
+                    data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+        </div> -->
+
+    </div>
+    <!--wrapper end-->
+
+
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"
+        integrity="sha256-H9jAz//QLkDOy/nzE9G4aYijQtkLt9FvGmdUTwBk6gs=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="js/modernizr-3.6.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/lib/slick/slick.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+    <!-- Maps -->
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAofX76hfImORJU_rsNCEapJF7yHDGT8n0&libraries=places,geometry"></script> -->
+    <!-- <script src="js/map-cluster/infobox.min.js"></script>
+    <script src="js/map-cluster/markerclusterer.js"></script>
+    <script src="js/map-cluster/maps.js"></script> -->
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAofX76hfImORJU_rsNCEapJF7yHDGT8n0&libraries=places,geometry"></script>
+    <script src="js/map-cluster/googlemap.js"></script>
+
+    <!-- <script src="js/map-cluster/googleMap.js" async></script> -->
+    <!-- <script src="js/map-cluster/states.js" async></script>
+    <script src="js/map-cluster/zoneone.js" async></script>
+    <script src="js/map-cluster/zonetwo.js" async></script>
+    <script src="js/map-cluster/zonethree.js" async></script>
+    <script src="js/map-cluster/zonefour.js" async></script>
+    <script src="js/map-cluster/zonefive.js" async></script> -->
+
+</body>
+
+</html>
